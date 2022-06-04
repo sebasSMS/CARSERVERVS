@@ -1,0 +1,67 @@
+body{
+    background: #1FA2FF; 
+    background: -webkit-linear-gradient(to right, #3decd5, #12D8FA, #1FA2FF); 
+    background: linear-gradient(to right, #3decd5, #12D8FA, #1FA2FF);
+    
+    font-family:'Times New Roman', Times, serif;
+    position: relative;
+}
+.titulo{
+    margin-left:5px;
+    font-family:'Times New Roman', Times, serif;
+    
+}
+.buscador{
+    margin-bottom: 12px;
+    border-radius: 7px;
+    border-color:darkturquoise;
+}
+
+thead{
+    
+    background-color: blue;
+    color: azure ;
+
+    
+}
+tbody{
+    background: #00c6ff;  
+    background: -webkit-linear-gradient(to right, #0072ff, #00c6ff);  
+    background: linear-gradient(to right, #0072ff, #00c6ff); 
+    
+}
+
+
+.form-control{
+    width: 70%;
+    height: 35px;
+    margin-left: 40px;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.501);
+    border-radius: 7px;
+    line-height: 45px;
+    padding:  0 40px 0 10px;
+    transform: .3s  ease all;
+}
+.form-control:focus{
+    border:rgba(56, 53, 223, 0.322);
+    border: 2px solid  rgba(49, 46, 196, 0.692);
+    outline: none;
+    box-shadow: 3px 0px 30px rgba(163, 163, 163,0.4);
+
+}
+.cedula{
+    margin-left: 2px;
+    margin-top: 1px;
+    font-size: 20px;
+    font-weight: 70;
+}
+#Usuario{
+    margin: 1px 2px;
+    margin-bottom: 5px;
+    width: 170px;
+    height: 30px;  
+
+}
+
+ 

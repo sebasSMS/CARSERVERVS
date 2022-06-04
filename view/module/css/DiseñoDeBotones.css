@@ -1,0 +1,90 @@
+body{
+    background: #1FA2FF;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #3decd5, #12D8FA, #1FA2FF);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #3decd5, #12D8FA, #1FA2FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-family:'Times New Roman', Times, serif;
+    -webkit-background-size: cover; 
+    -moz-background-size: cover; 
+    -o-background-size: cover;
+    background-size: cover;
+    
+
+}
+.titulo{
+    padding-left:70px;
+    font-family:'Times New Roman', Times, serif;
+}
+
+/* contenedor de  botones */
+div.input-group{
+    
+    position: relative;
+    margin: 100px auto;
+    border-radius: 12px;
+    top: 0; left: 0; bottom: 0; right: 0;
+    width: 800px;
+    height: 500px;
+    background: rgba(3,3,3,.7);
+    overflow: hidden;
+}
+#bones{
+    position: relative;
+    display: block;
+    float: right;
+    width: 45%;
+    margin: auto;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    background: rgba(0, 0, 0, 0.392);
+    cursor: pointer;
+    border-radius: 12px;
+
+}
+a.btn{
+    position: relative;
+    display: block;
+    margin: 20px auto;
+    padding: 10px;
+    width: 20%;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+#bones:hover{
+    background: #0575E6;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #021B79, #0575E6);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #021B79, #0575E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color:rgba(0, 0, 0, 0.512);
+    box-shadow: 0 10px 12px 0 rgba(48, 98, 236, 0.342), 0 13px 40px 0 rgba(48, 98, 236,  0.342);
+}
+#bones:active {
+    box-shadow:  rgba(0,0,0,.2);
+    transform: translateY(2px);
+}
+#salir{
+    position: relative;
+    display: block;
+    margin: 6px auto ;
+    margin-right: 40px;
+    padding: 10px;
+    border-radius: 12px;
+    width: 10%;
+    float: right;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    background: rgba(0, 0, 0, 0.525);
+}
+#salir:hover{
+    background: #ED213A;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #93291E, #ED213A);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #93291E, #ED213A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color:rgba(0, 0, 0, 0.512);
+    box-shadow: 0 10px 12px 0 rgba(243, 33, 33, 0.342), 0 13px 40px 0 rgba(48, 98, 236,  0.342);
+}
+#salir:active {
+    box-shadow:  rgba(0,0,0,.2);
+    transform: translateY(2px);
+}
+

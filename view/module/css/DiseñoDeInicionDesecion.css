@@ -1,0 +1,92 @@
+body{
+    background: #1FA2FF;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #3decd5, #12D8FA, #1FA2FF);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #3decd5, #12D8FA, #1FA2FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+}
+.formulario{
+    width: 50%;
+    margin-left: 300px;
+    margin-top: 5px;
+
+    
+
+}
+.input-box {
+    
+    width: 50%;
+    border-bottom: 1px solid #0080d8;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    
+}
+.input-box input{
+    width: 90%;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: #000000e8;
+}
+::placeholder{
+    color:#6190e68f;
+    
+}
+.eye{
+    margin-left: 5px;
+    position: absolute;
+
+}
+
+#noVer{
+    display:none;
+}
+body{
+    background-color: rgba(14, 238, 238, 0.555);
+    font-family:Abril falface;
+    
+}
+.titulo{
+    margin-left: 300px;
+    margin-top: 20px;
+    
+    color: #0080d8;
+   
+
+
+}
+.logo{
+    margin-left: 305px;
+    margin-top: 80px;
+    
+    
+}
+
+.btn {
+   
+    margin-left: 200px;
+    
+    
+    
+    
+}
+#remember{
+    position:relative;
+    margin-right: 3px;
+    margin-top: 20px; 
+    
+}
+.icono{
+    width: 20px;
+    height: 20px;
+    margin-bottom: 3px;
+    margin-left: 210px;
+
+}
+ 
+  
+
+
+
+
+
+
