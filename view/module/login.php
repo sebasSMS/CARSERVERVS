@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=}, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="view/css/prueba.css">
-    <link rel="stylesheet" href="css/sweetalert2.min.css">
-    <script src="js/sweetalert2.all.min.js"></script>
+    <link rel="stylesheet" href="view/css/sweetalert2.min.css">
+        <script src="view/js/sweetalert2.all.min.js"></script>
     
     
 </head>

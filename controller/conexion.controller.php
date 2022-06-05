@@ -8,8 +8,7 @@
             if(gettype($rest) != "boolean"){ // YES FIND
 
                 $_SESSION["login"] = true;
-                header("location:index.php");
-                echo "<script>alert('YA HA INGRESASDO');</script>";
+                echo "<script>alert('YA HA INGRESADO');</script>";
             }else{
                 echo "<script>
                 Swal.fire(
