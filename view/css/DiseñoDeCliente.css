@@ -1,42 +1,41 @@
 body{
     
     background: #1FA2FF; 
-    background: -webkit-linear-gradient(to right, #3decd5, #12D8FA, #1FA2FF); 
-    background: linear-gradient(to right, #3decd5, #12D8FA, #1FA2FF);
+    background: -webkit-linear-gradient(to left, #3decd5, #12D8FA, #1FA2FF); 
+    background: linear-gradient(to left, #3decd5, #12D8FA, #1FA2FF);
     
     font-family:'Times New Roman', Times, serif;
-    position: relative;
+    
 
 }
 .titulo{
     text-align:center;
-    margin-top: 10px;
+
     font-family:'Times New Roman', Times, serif;
     position: relative;
     
 }
 div.container{
-    width: 85%;
+    width:auto;
     height: 360px;
     border: 1px;
     background: #00c6ff;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #0072ff, #00c6ff);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #0072ff, #00c6ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: -webkit-linear-gradient(to left, #0072ff, #00c6ff);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #0072ff, #00c6ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     border-radius: 7px;
     border-color: rgba(0, 0, 0, 0.651);
     border-style: solid;
     margin-top: 12px;
-    
-    
 
-    /* background-color: rgba(61, 134, 211, 0.658) */
 
 }
-.logo{
-    margin-top: 10px;
-    margin-left: 400px;
-    
-    
+
+div.card-body{
+    width: 80%;
+}
+div.form-groun{
+    text-align:left;
+
 }
 .cedula{
     margin-left: 115px;
@@ -56,18 +55,10 @@ div.container{
 }
 #formulario{
     display: grid;
-    grid-template-columns: 1fr 1fr; 
-    gap: 4px;
-    /* text-align:center; */
+    text-align:center; 
     
-}
-.subtitulos{
-    display: block;
-    font-weight: 100;
-    padding: 2px;
-    /* margin-left: 17px; */
-    margin-left: 80px;
-}
+} 
+
 .negacion{
     
     position: relative;
@@ -75,10 +66,10 @@ div.container{
 }
 /* diseño de los campos */
 .form-control{
-    width: 400px;
+    /* width: auto; */
     height: 35px;
     margin: auto; 
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.936);
     border: 1px solid rgba(0, 0, 0, 0.501);
     border-radius: 7px;
     line-height: 45px;
@@ -88,8 +79,9 @@ div.container{
 }
 .form-control:hover {
     border: #3decd5;
-    color: white;
-  }
+    
+}
+
 .form-control:focus{
     border:rgba(56, 53, 223, 0.322);
     border: 3px solid  rgba(49, 46, 196, 0.692);
@@ -145,14 +137,21 @@ div.container{
 }
 div.botones{
     margin-top: 30px;
-    width: 90%;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
     
 }
 .btn{
 
     width: 200px;
-    margin-left: 7px;
-    float:right;
+    margin:auto;
+    
+
+    
    
 }
  /* ------- botones---------- */
@@ -179,3 +178,10 @@ div.botones{
  
   
 
+@media screen and (max-width:576px) {
+
+    div.container{
+        background-color:#bb2929;
+    }
+    
+}

@@ -5,15 +5,15 @@
         private $nombre;
         private $apellido;
         private $correo;
-        private $celula;
+        private $celular;
         private $placa;
 
-        public function __construct($cedula, $nombre, $apellido, $correo, $celula, $placa) {
+        public function __construct($cedula, $nombre, $apellido, $correo, $celular, $placa) {
             $this-> cedula = $cedula;
             $this-> nombre = $nombre;
             $this-> apellido = $apellido;
             $this-> correo = $correo;
-            $this-> celula = $celula;
+            $this-> celula = $celular;
             $this-> placa = $placa;
 
         }
@@ -26,31 +26,32 @@
         public function getApellido(){
             return $this -> apellido;
         }
+        public function getCelular(){
+            return $this -> celular;
+        }
         public function getCorreo(){
             return $this -> correo;
-        }
-        public function getCelula(){
-            return $this -> celula;
         }
         public function getPlaca(){
             return $this -> placa;
         }
-        public function setcedula($cedula){
+      /*   set */
+        public function setCedula($cedula){
             $this -> cedula = $cedula;
         }
-        public function setnombre($nombre){
+        public function setNombre($nombre){
             $this -> nombre = $nombre;
         }
-        public function setapellido($apellido){
+        public function setApellido($apellido){
             $this -> ellido = $apellido;
         }
-        public function setcorreo($correo){
+        public function setCorreo($correo){
             $this -> correo = $correo;
         }
-        public function setcelula($celula){
-            $this -> celula = $celula;
+        public function setCelular($celular){
+            $this -> celular = $celular;
         }
-        public function setplaca($placa){
+        public function setPlaca($placa){
             $this->  placa = $placa;
         }
 

@@ -7,8 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="view/css/prueba.css">
     <link rel="stylesheet" href="view/css/sweetalert2.min.css">
-        <script src="view/js/sweetalert2.all.min.js"></script>
-    
+    <script src="view/js/sweetalert2.all.min.js"></script>
     
 </head>
 <body>
@@ -49,6 +48,7 @@
                 }
             ?>
       <script src="js/contraseña.js"></script>
+      <script src="view/js/login.js"></script>
     
 </body>
 </html>
