@@ -1,50 +1,52 @@
 <?php
-    class  Conexion{
-        //atributos
+    class Conexion{
         private $host;
+        private $driver;
         private $usuario;
         private $clave;
-        private $charset;
-        private $baseDato;
+        private $base;
         private $url;
+        private $charSet;
         private $con;
-        //metodos
 
+        /* CREAMOS EL CONSTRUCTOR */
         public function __construct(){
             $this -> host = "localhost";
+            $this -> driver = "mysql";
             $this -> usuario = "root";
             $this -> clave = "";
-            $this -> charset = "UTF8";
-            $this -> baseDato = "carservicevs";
-            $this -> url = 'mysql:host ='.  $this-> host . ';dbname='. $this -> baseDato;
+            $this -> base = "carservicevs"; 
+            $this -> url = $this -> driver.":host=".
+            $this -> host.";dbname=". $this -> base;
+            $this -> charSet = "UTF8";
+            $this -> con=NULL;
+        }//Fin constructor
 
-            
-
-        }
-        public function conectar(){
+        public function conexion(){
             try{
-                $this -> con = new  PDO($this -> url, $this -> usuario, $this -> clave );
-                /* =========================================
-                ESTABLECEMOS LA CONEXION CON Ñ Y TILDES
-                ========================================= */
-                $this -> con -> exec('SET CHARACTER SET'. $this -> charset);
-            }catch( PDOException $e ) {
-                echo "Error en el PDO".$e -> getMessage() . $e -> getLine();
+                $this -> con = new PDO($this->url, $this->usuario, $this->clave);
+                $this -> con -> setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+                $this -> con -> exec('SET CHARACTER SET '.$this->charSet);
+
+            }catch(PDOException $e){
+                echo "Error al conectar".$e->getMessage();
             }
-           
-             return $this -> con;
-            
-        } 
+            return $this -> con;
+        }//Fin conexion
+
         public function __destruct(){
-    
-            $this -> con =NULL;
-        }
+            $this -> con = NULL;
+        }//Fin destructor
+
+    }//FIN CLASE
 
 
-    }
-
-        $objCon = new Conexion();
-        $objCon -> conectar(); 
-
-?>  
-    
+    /*try {
+        $c = new Conexion();
+        $conex = $c -> conexion();
+        var_dump($conex);
+        //echo "conexion exitosa";
+    } catch (Exception $e) {
+        echo "Error";
+    }*/
+?>

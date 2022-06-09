@@ -13,13 +13,13 @@
             
             $resultSet = false;
 
-            $sql = "SELECT  `USUARIO`, `CONTRASEÑA` FROM `iniciondesecion` WHERE 
-            USUARIO = ? AND CONTRASEÑA = ?";
+            $sql = "SELECT  `USUARIO`, `CLAVE` FROM `iniciondesecion` WHERE 
+            USUARIO = ? AND CLAVE = ?";
              
 
             try {
                 $con = new Conexion();
-                $stmt = $con -> conectar() -> prepare($sql);
+                $stmt = $con -> conexion() -> prepare($sql);
                 $stmt -> bindParam(1, $this -> user, PDO::PARAM_STR);
                 $stmt -> bindParam(2, $this -> pass, PDO::PARAM_STR);
                

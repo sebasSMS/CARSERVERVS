@@ -19,13 +19,13 @@
         }
         public function mldInsertarCliente(){
             /* creamos la sentecia */
-            $sql = "INSERT INTO `cliente`(`CEDULA`, `NOMBRE`, `APELLIDO`, `CELULAR`, `CORREO`, `PLACA`) VALUES (?,?,?,?,?,?)";
+            $sql = "INSERT INTO `clientes` (`CEDULA`, `NOMBRE`, `APELLIDO`, `CELULAR`, `CORREO`, `PLACA`) VALUES (?,?,?,?,?,?);";
             $this -> estado = false;
             /* creamos el try catch  */
             try {
                 /* llamamos a la conexion */
                 $con = new Conexion();
-                $stmt = $con -> conectar() -> prepare($sql);
+                $stmt = $con -> conexion() -> prepare($sql);
                 $stmt -> bindParam(1, $this->cedula, PDO::PARAM_INT );
                 $stmt -> bindParam(2, $this->nombre, PDO::PARAM_STR );
                 $stmt -> bindParam(3, $this->apellido, PDO::PARAM_STR );
@@ -34,6 +34,7 @@
                 $stmt -> bindParam(6, $this->placa, PDO::PARAM_STR );
                 $stmt -> execute();
                 $this -> estado = true;
+                
 
 
             } catch (PDOException $ex) {

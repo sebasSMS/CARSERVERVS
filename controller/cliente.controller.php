@@ -5,7 +5,13 @@
             $ojbDtoCliente = new Clientes($cedula,$nombre,$apellido,$celular,$correo,$placa);
             $ojbDaoCliente = new ModelClientes($ojbDtoCliente);
             if ($ojbDaoCliente -> mldInsertarCliente()){
-                echo "cliente insertado";
+                echo "<script>
+                Swal.fire(
+                    'GOOD',
+                    'Usuario insertado',
+                    'success'
+                  )
+                ;</script>";
 
             }else{
                 echo "cliente no insertado";
