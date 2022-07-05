@@ -1,0 +1,225 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+
+}
+:root{
+    --blue: #287bff;
+    --white: #fff;
+    --grey: #f5f5f5;
+    --black1: #222;
+    --black2: #999;
+
+
+
+}
+/* cuerpo */
+body{
+    min-height: 100vh;
+    overflow-x: hidden;
+
+}
+/* contenedor */
+.container{
+    position: relative;
+    width: 100%;
+
+}
+/* nevegacion */
+.navegacion{
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    background: var(--blue);
+    border-left: 10px solid var(--blue);
+    transition: 0.5s;
+    overflow: hidden;
+
+}
+.navegacion.active{
+    width: 80px;
+
+}
+/* navegacion con la etiqueta <ul></ul> */
+.navegacion ul{
+    position:absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+
+}
+/* estilo de los <li></li> */
+.navegacion ul li{
+    position: relative;
+    width: 100%;
+    list-style: none;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+
+
+}
+.navegacion ul li:hover,
+.navegacion ul li.hovered{
+
+    background: var(--white);
+
+}
+.navegacion ul li:nth-child(1){
+    margin-bottom: 40px;
+    pointer-events: none;
+
+
+}
+.navegacion ul li a{
+    position:relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: var(--white);
+
+}
+.navegacion ul li:hover a,
+.navegacion ul li.hovered a{
+    color: var(--blue);
+}
+/* posicion de los campos */
+.navegacion ul li a .iconos{
+    position: relative;
+    display: block;
+    min-width:60px;
+    height: 60px;
+    line-height: 70px;
+    text-align: center;
+
+}
+/* posicion de lso iconos */
+.navegacion ul li a .iconos ion-icon{
+    font-size: 1.75em;
+
+}
+/* posicion de los textos de los campos */
+.navegacion ul li a .title{
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    height: 60px;
+    line-height: 60px;
+    text-align: start;
+    white-space:nowrap;
+}
+
+/* hacemos la curva del lado derecho de los campos*/
+/* primer hacemos la cuerba arriba */
+.navegacion ul li:hover a::before,
+.navegacion ul li.hovered a::before{
+
+    content: '';
+    position: absolute;
+    right: 0;
+    top: -50px;
+    width: 50px;
+    height: 50px ;
+    background: transparent;
+    border-radius: 50%;
+    box-shadow: 35px 35px 0 10px var(--white);
+    pointer-events: none;
+
+}
+/* segundo hacemos la cuerba debajo */
+.navegacion ul li:hover a::after,
+.navegacion ul li.hovered a::after{
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -50px;
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    border-radius: 50%;
+    box-shadow: 35px -35px 0 10px var(--white);
+    pointer-events: none;
+
+}
+/* cabeza */
+.main{
+    position:absolute;
+    width: calc(100% - 300px);
+    left: 300px;
+    min-height: 100vh;
+    background: var(--white);
+    transition: 0.5s;
+
+}
+.main.active{
+    width: calc(100% - 80px);
+    left: 80px;
+}
+.topbar{
+    width:100%;
+    height:60px;
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+.toggle{
+    top: 0;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    font-size: 2.5em;
+    cursor: pointer;
+}
+.search{
+    position:relative;
+    width: 100%;
+
+}
+.search img{
+    position: absolute;
+    width: 90%;
+    height: 500px;
+    top: 0;
+    left: 50px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.user{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow:hidden;
+    cursor: pointer;
+}
+.user img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.container{
+    width:100%;
+    height:60px;
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 0 10px;
+    
+}
+
+
+/* car */
+
+
+
+
+
