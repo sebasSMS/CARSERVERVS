@@ -32,7 +32,9 @@ body{
     position: fixed;
     width: 300px;
     height: 100%;
-    background: var(--blue);
+    background: #1FA2FF; 
+    background: -webkit-linear-gradient(to left, #3decd5, #12D8FA, #1FA2FF); 
+    background: linear-gradient(to left, #3decd5, #12D8FA, #1FA2FF);
     border-left: 10px solid var(--blue);
     transition: 0.5s;
     overflow: hidden;
@@ -63,7 +65,7 @@ body{
 .navegacion ul li:hover,
 .navegacion ul li.hovered{
 
-    background: var(--white);
+    background:#12D8FA;
 
 }
 .navegacion ul li:nth-child(1){
@@ -83,7 +85,7 @@ body{
 }
 .navegacion ul li:hover a,
 .navegacion ul li.hovered a{
-    color: var(--blue);
+    color:rgb(33, 31, 31);
 }
 /* posicion de los campos */
 .navegacion ul li a .iconos{
@@ -124,11 +126,11 @@ body{
     height: 50px ;
     background: transparent;
     border-radius: 50%;
-    box-shadow: 35px 35px 0 10px var(--white);
+    box-shadow: 35px 35px 0 10px #12D8FA;
     pointer-events: none;
 
 }
-/* segundo hacemos la cuerba debajo */
+/* segundo hacemos la curba debajo */
 .navegacion ul li:hover a::after,
 .navegacion ul li.hovered a::after{
     content: '';
@@ -139,7 +141,7 @@ body{
     height: 50px;
     background: transparent;
     border-radius: 50%;
-    box-shadow: 35px -35px 0 10px var(--white);
+    box-shadow: 35px -35px 0 10px #12D8FA;;
     pointer-events: none;
 
 }
@@ -149,7 +151,9 @@ body{
     width: calc(100% - 300px);
     left: 300px;
     min-height: 100vh;
-    background: var(--white);
+    background: #1FA2FF; 
+    background: -webkit-linear-gradient(to right, #3decd5, #12D8FA, #1FA2FF); 
+    background: linear-gradient(to right, #3decd5, #12D8FA, #1FA2FF);
     transition: 0.5s;
 
 }

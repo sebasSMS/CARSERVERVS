@@ -13,8 +13,7 @@
             
             $resultSet = false;
 
-            $sql = "SELECT  `USUARIO`, `CLAVE` FROM `iniciondesecion` WHERE 
-            USUARIO = ? AND CLAVE = ?";
+            $sql = "CALL splogin(?,?)";
              
 
             try {

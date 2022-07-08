@@ -13,13 +13,14 @@ body{
 .titulo{
     padding-left:70px;
     font-family:'Times New Roman', Times, serif;
+    
 }
 
 /* contenedor de  botones */
 div.input-group{
     
     position: relative;
-    margin: 100px auto;
+    margin: 50px auto;
     border-radius: 12px;
     top: 0; left: 0; bottom: 0; right: 0;
     width: 800px;
@@ -31,7 +32,8 @@ div.input-group{
     position: relative;
     display: block;
     float: right;
-    width: 45%;
+    width: 40%;
+    height: 200px;
     margin: auto;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -44,7 +46,7 @@ div.input-group{
 a.btn{
     position: relative;
     display: block;
-    margin: 20px auto;
+    margin: 10px auto;
     padding: 10px;
     width: 20%;
     box-sizing: border-box;
@@ -65,16 +67,14 @@ a.btn{
 #salir{
     position: relative;
     display: block;
-    margin: 6px auto ;
-    margin-right: 40px;
     padding: 10px;
     border-radius: 12px;
     width: 10%;
-    float: right;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
-    background: rgba(0, 0, 0, 0.525);
+    background: rgba(0, 0, 0, 0);
+    color: red;
 }
 #salir:hover{
     background: #ED213A;  /* fallback for old browsers */

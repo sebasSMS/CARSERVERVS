@@ -1,4 +1,7 @@
 <?php
+
+use LDAP\Result;
+
     class ModelClientes{
         private $cedula;
         private $nombre;
@@ -43,8 +46,24 @@
             return $this -> estado;
 
 
+        }/* fin de insertar producto */
+        public function mdllistarClientes(){
+            $sql="CALL `splListarClientes`( );";
+            $resultset= false;
+            try {
+                $con = new Conexion();
+                $stmt = $con -> conexion() -> prepare($sql);
+                $stmt -> execute();
+                $resultset = $stmt;
+     
+            } catch (PDOException $ex) {
+                echo "Hay un error en el dao de cliente " . $ex -> getMessage();
+            }
+            return $resultset;  
+        
         }
 
 
-    } /* end of class */
+    }
+    /* end of class */
 ?>

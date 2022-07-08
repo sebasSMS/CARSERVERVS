@@ -3,14 +3,12 @@ body{
     background: #1FA2FF; 
     background: -webkit-linear-gradient(to left, #3decd5, #12D8FA, #1FA2FF); 
     background: linear-gradient(to left, #3decd5, #12D8FA, #1FA2FF);
-    
     font-family:'Times New Roman', Times, serif;
     
 
 }
 .titulo{
     text-align:center;
-
     font-family:'Times New Roman', Times, serif;
     position: relative;
     

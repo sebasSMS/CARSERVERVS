@@ -20,5 +20,17 @@
 
 
         }
+        public function ctrListarCliente(){
+            $array = false; 
+            try {
+                $ojbDtoCliente = new Clientes(null,null,null,null,null,null);
+                $ojbDaoCliente = new ModelClientes($ojbDtoCliente);
+                $array =  $ojbDaoCliente -> mdllistarClientes() -> fetchALL();
+            } catch (\Throwable $th) {
+                echo"Error en el controlador";
+            }
+            return $array;
+
+        }
     } /* end of class */
 ?>

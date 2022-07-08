@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="view/css/estilos.css">
+    
 </head>
 
 <body>
@@ -56,7 +57,7 @@
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="index.php?ruta=informes">
                     <span class="iconos">
                         <ion-icon name="albums-outline"></ion-icon>
                     </span>
@@ -92,6 +93,7 @@
         </ul>
 
     </div>
+    
 
     </div>
     <footer class="main-footer">

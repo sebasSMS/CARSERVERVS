@@ -8,6 +8,7 @@ body{
 }
 .titulo{
     margin-left:5px;
+    text-align: center;
     font-family:'Times New Roman', Times, serif;
     
 }
@@ -62,6 +63,23 @@ tbody{
     width: 170px;
     height: 30px;  
 
+}
+#salir{
+    position:relative;
+    width:5%;
+    margin-bottom: 3px;
+    margin-left: 20px;
+}
+#salir:hover{
+    background: #ED213A;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #93291E, #ED213A);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #93291E, #ED213A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color:rgba(0, 0, 0, 0.512);
+    box-shadow: 0 10px 12px 0 rgba(243, 33, 33, 0.342), 0 13px 40px 0 rgba(48, 98, 236,  0.342);
+}
+#salir:active {
+    box-shadow:  rgba(0,0,0,.2);
+    transform: translateY(2px);
 }
 
  
