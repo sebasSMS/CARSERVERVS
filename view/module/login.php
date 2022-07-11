@@ -14,7 +14,7 @@
 
 <body>
 
-  <div class="mobile-screen">
+  <div class="mobile-screen" id="login" mame="login">
     <div class="header">
       <h1>Log in</h1>
     </div>

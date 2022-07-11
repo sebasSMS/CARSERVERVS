@@ -24,10 +24,10 @@
                 require_once "view/module/RegistroDeVehiculos.php";
                 break;
                /*-------------------  menu de informes--------------------------- */
-               case 'tableUsuario':
+            case 'tableUsuario':
                 require_once "view/module/tablaDeEmpleado.php";
                 break;
-                case 'tableCliente':
+            case 'tableCliente':
                 require_once "view/module/tablaDeClientes.php";
                 break;
             case 'tableVehiculos':
@@ -37,9 +37,14 @@
             case 'reporte':
                 require_once "view/module/reporte.php";
                 break;
+            case 'menuPrincipal':
+                    require_once "view/module/menuPrincipal.php";
+                    break;
+           
             default:
                 require_once "view/module/menuPrincipal.php";
                 break;
+            
 
         }
     }else{

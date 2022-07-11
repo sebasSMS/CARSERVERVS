@@ -35,7 +35,7 @@
               <li>
                 <div class="placeholder">
                   <div class="upside">
-                    <a href="RegistroDeVehiculos.html" class="button"><i class="fa fa-car"></i></a>
+                    <a href="index.php?ruta=vehiculos" class="button"><i class="fa fa-car"></i></a>
                   </div>
                 </div>
               </li>
@@ -49,21 +49,21 @@
               <li>
                 <div class="placeholder">
                   <div class="upside">
-                    <a href="#" class="button"><i class="fa fa-commenting"></i></a>
+                    <a href="view/module/unload.php"  class="button"><i class="fa fa-sign-out"></i></a>
                   </div>
                 </div>
               </li>
               <li>
                 <div class="placeholder">
                   <div class="upside">
-                    <a href="creacionDeCliente.html" class="button"><i class="fa fa-vcard"></i></a>
+                    <a href="index.php?ruta=cliente" class="button"><i class="fa fa-vcard"></i></a>
                   </div>
                 </div>
               </li>
               <li>
                 <div class="placeholder">
                   <div class="upside">
-                    <a href="tablaDeEmpleados.html" class="button"><i class="fa fa-table"></i></a>
+                    <a href="index.php?ruta=tableUsuario" class="button"><i class="fa fa-table"></i></a>
                     <a href="#" class="miniBoton"><i class="fa fa-vcard-o"></i></a>
                   </div>
                 </div>
@@ -71,7 +71,7 @@
               <li>
                 <div class="placeholder">
                   <div class="upside">
-                    <a href="tablaDeVehiculos.html" class="button"><i class="fa fa-table"></i></a>
+                    <a href="index.php?ruta=tableVehiculos" class="button"><i class="fa fa-table"></i></a>
                     <a href="" class="miniBoton" id=""><i class="fa fa-car" ></i></a>
                   </div>
                 </div>
@@ -79,7 +79,7 @@
               <li>
                 <div class="placeholder">
                   <div class="upside">
-                    <a href="tablaDeUsuario.html" class="button"><i class="fa fa-table"></i> </a>
+                    <a href="index.php?ruta=tableCliente" class="button"><i class="fa fa-table"></i> </a>
                     <a href="#" class="miniBoton"><i class="fa fa-vcard"></i> </a>
                   </div>
                 </div>
@@ -87,14 +87,14 @@
               <li>
                 <div class="placeholder">
                   <div class="upside">
-                    <a href="administracionDeUsuario.html" class="button"><i class="fa fa-user"></i></a>
+                    <a href="index.php?ruta=menuPrincipal" class="button"><i class="fa fa-user"></i></a>
                   </div>
                 </div>
               </li>
               <li>
                 <div class="placeholder">
                   <div class="upside">
-                    <a href="creUsuario.html" class="button"><i class="fa fa-vcard-o"></i></a>
+                    <a href="index.php?ruta=usuario" class="button"><i class="fa fa-vcard-o"></i></a>
                   </div>
                 </div>
               </li>

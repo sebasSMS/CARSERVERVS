@@ -12,111 +12,111 @@
 </head>
 <body>
     <div>
-        <section class="menu menu--circle">
-            <input type="checkbox" id="menu__active" />
-            <label for="menu__active" class="menu__active">
-              <div class="menu__toggle">
-                <div class="icon">
-                  <div class="hamburger"></div>
+    <section class="menu menu--circle">
+        <input type="checkbox" id="menu__active" />
+        <label for="menu__active" class="menu__active">
+          <div class="menu__toggle">
+            <div class="icon">
+              <div class="hamburger"></div>
+            </div>
+          </div>
+          <input type="radio" name="arrow--up" id="degree--up-0" />
+          <input type="radio" name="arrow--up" id="degree--up-1" />
+          <input type="radio" name="arrow--up" id="degree--up-2" />
+          <div class="menu__listings">
+            <ul class="circle">
+              <li>
+                <div class="placeholder">
+                  <div class="upside">
+                    <a href="" class="button"><i class="fa fa-address-card"></i></a>
+                  </div>
                 </div>
-              </div>
-              <input type="radio" name="arrow--up" id="degree--up-0" />
-              <input type="radio" name="arrow--up" id="degree--up-1" />
-              <input type="radio" name="arrow--up" id="degree--up-2" />
-              <div class="menu__listings">
-                <ul class="circle">
-                  <li>
-                    <div class="placeholder">
-                      <div class="upside">
-                        <a href="" class="button"><i class="fa fa-address-card"></i></a>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="placeholder">
-                      <div class="upside">
-                        <a href="RegistroDeVehiculos.html" class="button"><i class="fa fa-car"></i></a>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="placeholder">
-                      <div class="upside">
-                        <a href="#">&nbsp</a>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="placeholder">
-                      <div class="upside">
-                        <a href="#" class="button"><i class="fa fa-commenting"></i></a>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="placeholder">
-                      <div class="upside">
-                        <a href="creacionDeCliente.html" class="button"><i class="fa fa-vcard"></i></a>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="placeholder">
-                      <div class="upside">
-                        <a href="tablaDeEmpleados.html" class="button"><i class="fa fa-table"></i></a>
-                        <a href="#" class="miniBoton"><i class="fa fa-vcard-o"></i></a>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="placeholder">
-                      <div class="upside">
-                        <a href="tablaDeVehiculos.html" class="button"><i class="fa fa-table"></i></a>
-                        <a href="" class="miniBoton" id=""><i class="fa fa-car" ></i></a>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="placeholder">
-                      <div class="upside">
-                        <a href="tablaDeUsuario.html" class="button"><i class="fa fa-table"></i> </a>
-                        <a href="#" class="miniBoton"><i class="fa fa-vcard"></i> </a>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="placeholder">
-                      <div class="upside">
-                        <a href="administracionDeUsuario.html" class="button"><i class="fa fa-user"></i></a>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="placeholder">
-                      <div class="upside">
-                        <a href="creUsuario.html" class="button"><i class="fa fa-vcard-o"></i></a>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-              <div class="menu__arrow menu__arrow--top">
-                <ul>
-                  <li>
-                    <label for="degree--up-0">
-                      <div class="arrow"></div>
-                    </label>
-                    <label for="degree--up-1">
-                      <div class="arrow"></div>
-                    </label>
-                    <label for="degree--up-2">
-                      <div class="arrow"></div>
-                    </label>
-                  </li>
-                </ul>
-              </div>
-            </label>
-        </section>
+              </li>
+              <li>
+                <div class="placeholder">
+                  <div class="upside">
+                    <a href="index.php?ruta=vehiculos" class="button"><i class="fa fa-car"></i></a>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="placeholder">
+                  <div class="upside">
+                    <a href="#">&nbsp</a>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="placeholder">
+                  <div class="upside">
+                    <a href="view/module/unload.php"  class="button"><i class="fa fa-sign-out"></i></a>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="placeholder">
+                  <div class="upside">
+                    <a href="index.php?ruta=cliente" class="button"><i class="fa fa-vcard"></i></a>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="placeholder">
+                  <div class="upside">
+                    <a href="index.php?ruta=tableUsuario" class="button"><i class="fa fa-table"></i></a>
+                    <a href="#" class="miniBoton"><i class="fa fa-vcard-o"></i></a>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="placeholder">
+                  <div class="upside">
+                    <a href="index.php?ruta=tableVehiculos" class="button"><i class="fa fa-table"></i></a>
+                    <a href="" class="miniBoton" id=""><i class="fa fa-car" ></i></a>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="placeholder">
+                  <div class="upside">
+                    <a href="index.php?ruta=tableCliente" class="button"><i class="fa fa-table"></i> </a>
+                    <a href="#" class="miniBoton"><i class="fa fa-vcard"></i> </a>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="placeholder">
+                  <div class="upside">
+                    <a href="index.php?ruta=menuPrincipal" class="button"><i class="fa fa-user"></i></a>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="placeholder">
+                  <div class="upside">
+                    <a href="index.php?ruta=usuario" class="button"><i class="fa fa-vcard-o"></i></a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="menu__arrow menu__arrow--top">
+            <ul>
+              <li>
+                <label for="degree--up-0">
+                  <div class="arrow"></div>
+                </label>
+                <label for="degree--up-1">
+                  <div class="arrow"></div>
+                </label>
+                <label for="degree--up-2">
+                  <div class="arrow"></div>
+                </label>
+              </li>
+            </ul>
+          </div>
+        </label>
+    </section>
     
         <div  class="col-md-12">
           <h1 class="titulo col-12 col-sm-12 col-md-12 ">Registro de Usuario</h1>

@@ -14,7 +14,6 @@
             $resultSet = false;
 
             $sql = "CALL splogin(?,?)";
-             
 
             try {
                 $con = new Conexion();

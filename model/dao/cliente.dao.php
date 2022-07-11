@@ -1,6 +1,6 @@
 <?php
 
-use LDAP\Result;
+
 
     class ModelClientes{
         private $cedula;
@@ -22,7 +22,7 @@ use LDAP\Result;
         }
         public function mldInsertarCliente(){
             /* creamos la sentecia */
-            $sql = "INSERT INTO `clientes` (`CEDULA`, `NOMBRE`, `APELLIDO`, `CELULAR`, `CORREO`, `PLACA`) VALUES (?,?,?,?,?,?);";
+            $sql="CALL `splRegistroClientes`(?,?,?,?,?,?);";
             $this -> estado = false;
             /* creamos el try catch  */
             try {
@@ -47,7 +47,7 @@ use LDAP\Result;
 
 
         }/* fin de insertar producto */
-        public function mdllistarClientes(){
+        public function mdlListarClientes(){
             $sql="CALL `splListarClientes`( );";
             $resultset= false;
             try {
@@ -62,6 +62,51 @@ use LDAP\Result;
             return $resultset;  
         
         }
+        public function mdlModificarClientes(){
+            $sql="CALL `splModificarClientes`(?,?,?,?,?,?);";
+            $this -> estado = false;
+            /* creamos el try catch  */
+            try {
+                /* llamamos a la conexion */
+                $con = new Conexion();
+                $stmt = $con -> conexion() -> prepare($sql);
+                $stmt -> bindParam(1, $this->cedula, PDO::PARAM_INT );
+                $stmt -> bindParam(2, $this->nombre, PDO::PARAM_STR );
+                $stmt -> bindParam(3, $this->apellido, PDO::PARAM_STR );
+                $stmt -> bindParam(4, $this->celular, PDO::PARAM_STR );
+                $stmt -> bindParam(5, $this->correo, PDO::PARAM_STR );
+                $stmt -> bindParam(6, $this->placa,  PDO::PARAM_STR );
+                $stmt -> execute();
+                $this -> estado = true;
+                
+
+
+            } catch (PDOException $ex) {
+                echo "Hay un error en el dao de cliente " . $ex -> getMessage();
+            }
+            return $this -> estado;
+
+        }
+        public function mdlEliminarClientes(){
+            $sql="CALL `splEliminarCliente`(?);";
+            $this -> estado = false;
+
+            try {
+                /* llamamos a la conexion  */
+                $con = new Conexion();
+                $stmt = $con -> conexion() -> prepare($sql);
+                $stmt -> bindParam(1, $this->cedula, PDO::PARAM_INT );
+                $stmt -> execute();
+                $this -> estado = true;
+                
+
+
+            } catch (PDOException $ex) {
+                echo "Hay un error en el dao al eliminar el cliente " . $ex -> getMessage();
+            }
+            return $this -> estado;
+
+        } 
 
 
     }
