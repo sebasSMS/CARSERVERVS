@@ -10,7 +10,6 @@ function validar(e){
     let formulario = document.getElementById('formulario');
 
     let estado = true;
-
     if (cedula.value == ""){
         cedula.style.borderColor ="red";
         estado = false;
