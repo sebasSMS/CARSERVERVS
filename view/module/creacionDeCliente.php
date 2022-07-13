@@ -146,95 +146,66 @@
           <div class="row">
             <div class="form-groun col-12 col-sm-6 col-md-6" id="grupoCedula">
               <label for="pwd" class="subtitulos">Cedula </label>
-              <input type="text" class="form-control" name="txtCedula" id="txtCedula">
-              <i class="negacion">
-              <i class="fa-solid fa-circle-xmark"  id="iconoDeError"></i>
-              </i>
-              
+              <div class="negacion">
+                <input type="number" class="form-control" name="txtCedula" id="txtCedula">
+                <i class=" iconoDeError  fas fa-times-circle"></i>
+              </div>
               <p class="error">La cedula debe tener de 7 a 10 digitos y no puede contener ni letras ni caracteres especiales</p>
-
-
-
+              
             </div>
+            
             <div class="form-groun col-12 col-sm-6 col-md-6" id="grupoCorreo">
               <label for="pwd" class="subtitulos">Correo </label>
-              <div class="">
-                <input type="text" class="form-control" name="txtCorreo" id="txtCorreo">
-                <i class="negacion">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle" id="iconoDeError" viewBox="0 0 16 16">
-                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
-                  </svg>
-
-                </i>
-                <p class="error">Por favor ingrese el correo </p>
-
+              <div class="negacion">
+                <input type="email" class="form-control" name="txtCorreo" id="txtCorreo">
+                <i class=" iconoDeError  fas fa-times-circle" id="negacion"></i>
+                
               </div>
+              <p class="error">Por favor ingrese el correo </p>
 
             </div>
           </div>
           <div class="row">
             <div class="form-groun col-12 col-sm-6 col-md-6 " id="grupoNombre">
               <label for="pwd" class="subtitulos">Nombre </label>
-              <div class="">
+              <div class="negacion">
                 <input type="text" class="form-control" name="txtNombre" id="txtNombre">
-                <i class="negacion">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle" id="iconoDeError" viewBox="0 0 16 16">
-                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
-                  </svg>
-
-                </i>
-
-                <p class="error">El usuario tiene que ser de 4 a 16 dígitos y no puede contener numeros y ni caracteres especiales.</p>
-
+                <i class="  iconoDeError fas fa-times-circle"></i>
+                
               </div>
+              <p class="error">El usuario tiene que ser de 4 a 16 dígitos y no puede contener numeros y ni caracteres especiales.</p>
 
             </div>
             <div class="form-groun col-12 col-sm-6 col-md-6" id="grupoCelular">
               <label for="pwd" class="subtitulos">Celular </label>
-              <div class="  ">
-                <input type="text" class="form-control" name="txtCelular" id="txtCelular">
-                <i class="negacion">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle" id="iconoDeError" viewBox="0 0 16 16">
-                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
-                  </svg>
-
-                </i>
-                <p class="error">El telefono solo puede contener numeros y el maximo son 14 dígitos.</p>
-
+              <div class="negacion">
+                <input type="number" class="form-control" name="txtCelular" id="txtCelular">
+                <i class="  iconoDeError fas fa-times-circle"></i>
+                
               </div>
+              <p class="error">El telefono solo puede contener numeros y el maximo son 14 dígitos.</p>
 
             </div>
           </div>
           <div class="row">
             <div class="form-groun col-12 col-sm-6 col-md-6 " id="grupoApellido">
               <label for="pwd" class="subtitulos">Apellido</label>
-              <div class="">
+              <div class="negacion">
                 <input type="text" class="form-control" name="txtApellido" id="txtApellido">
-                <i class="negacion">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle" id="iconoDeError" viewBox="0 0 16 16">
-                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
-                  </svg>
-
-                </i>
-
-                <p class="error">El apellido tiene que ser de 4 a 16 dígitos y no puede contener numeros y ni caracteres especiales.</p>
-
+                <i class="  iconoDeError fas fa-times-circle"></i>
+                
               </div>
+              <p class="error">El apellido tiene que ser de 4 a 16 dígitos y no puede contener numeros y ni caracteres especiales.</p>
 
             </div>
             <div class="form-groun col-12 col-sm-6 col-md-6" id="grupoPlaca">
               <label for="pwd" class="subtitulos">Placa </label>
-              <div class="">
+              <div class="negacion">
                 <input type="text" class="form-control" name="txtPlaca" id="txtPlaca">
-                <i class="negacion">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle" id="iconoDeError" viewBox="0 0 16 16">
-                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
-                  </svg>
-
-                </i>
-                <p class="error">la placa solo puede llevar numeros, letras y giones</p>
-
+                <i class="  iconoDeError fas fa-times-circle"></i>
+                
               </div>
+              <p class="error">la placa solo puede llevar numeros, letras y giones</p>
 
             </div>
           </div>
@@ -272,6 +243,7 @@
   
 
   <script src="view/js/formularios.js"></script>
+  <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
 
 
 </body>

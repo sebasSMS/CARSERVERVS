@@ -46,14 +46,15 @@ const validarCampo = (expresiones,input,campo) => {
     if(expresiones.test(input.value)){
         document.getElementById(`grupo${campo}`).classList.remove('form-groun-incorrecto');
         document.getElementById(`grupo${campo}`).classList.add('form-groun-correcto');
+        document.querySelector(`#grupo${campo} i`).classList.add('fa-check-circle');
+		document.querySelector(`#grupo${campo} i`).classList.remove('fa-times-circle');
         document.querySelector(`#grupo${campo} .error`).classList.remove('error-activo');
-        document.querySelector(`#grupo${campo} .i`).classList.remove('fa-solid fa-circle-xmark');
-        document.querySelector(`#grupo${campo} .i`).classList.add('fa-solid fa-circle-check');
-
         campos[campo] = true;
     }else{
         document.getElementById(`grupo${campo}`).classList.add('form-groun-incorrecto');
         document.getElementById(`grupo${campo}`).classList.remove('form-groun-correcto');
+        document.querySelector(`#grupo${campo} i`).classList.add('fa-times-circle');
+		document.querySelector(`#grupo${campo} i`).classList.remove('fa-check-circle');
         document.querySelector(`#grupo${campo} .error`).classList.add('error-activo');
         campos[campo] = false;
     }
@@ -66,7 +67,7 @@ inputs.forEach((input) =>{
 formulario.addEventListener('submit',(e) =>{
     e.preventDefault();
     if(campos.cedula  && campos.nombre && campos.apellido && campos.celular && campos.correo && campos.placa){
-        alert('hola');
+        
 
     }else{
         alert("error");
