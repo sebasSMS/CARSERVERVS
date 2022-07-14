@@ -64,12 +64,4 @@ inputs.forEach((input) =>{
     input.addEventListener('blur', validarFormulario);
     
 })
-formulario.addEventListener('submit',(e) =>{
-    e.preventDefault();
-    if(campos.cedula  && campos.nombre && campos.apellido && campos.celular && campos.correo && campos.placa){
-        alert('hola');
 
-    }else{
-        alert("error");
-    }
-})

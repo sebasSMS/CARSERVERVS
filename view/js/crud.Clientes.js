@@ -1,4 +1,4 @@
-/* capturamso los elementos de la tabla con el atributo (obj) */
+/* capturamso los elementos de la tabla empleado con el atributo (obj) */
 function modificar(obj) {
   /* llamamos los campos del formulario modificar */
   mCedula = document.getElementById('txtMCedula');

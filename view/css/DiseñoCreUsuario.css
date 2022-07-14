@@ -92,12 +92,12 @@ div.form-groun{
 
 }
 .iconoDeError{
-    position: absolute;
-    margin-left: 380px;
-    bottom: 11px;
-    z-index: 100;
-    font-size: 16px;
-    opacity: 0;
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+	z-index: 100;
+	font-size: 16px;
+	opacity: 0;
 
 }
 #mensajeDeError{
@@ -145,7 +145,6 @@ div.botones{
     width: 200px;
     margin:auto;
 
-   
 }
  /* ------- botones---------- */
 

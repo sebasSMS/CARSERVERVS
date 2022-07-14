@@ -64,6 +64,24 @@ tbody{
     height: 30px;  
 
 }
+/* ----------------------botones------------------- */
+div.botones {
+    margin-top: 30px;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+
+}
+
+.btn {
+
+    width: 20%;
+    margin: auto;
+
+}
 #salir{
     position:relative;
     width:5%;
@@ -80,6 +98,15 @@ tbody{
 #salir:active {
     box-shadow:  rgba(0,0,0,.2);
     transform: translateY(2px);
+}
+#modalC {
+    
+    background: -webkit-linear-gradient(to top, #0073ff2d, #00e0f0); 
+    background: linear-gradient(to top, #0073ff2d, #00e0f0); 
+     
+}
+.dataTables_length{
+    display:none;
 }
 
  

@@ -152,7 +152,7 @@
 
         </tr>
       </thead>
-      <a name="" id="salir" class="btn btn-outline-success" href="index.php?ruta=reporte" role="button"><img src="view/img/excel.png" width="60%" height="30%" alt=""></a>
+      <a name="" id="salir" class="btn btn-outline-success" href="index.php?ruta=reporteClientes" role="button"><img src="view/img/excel.png" width="60%" height="30%" alt=""></a>
       <tbody>
         <?php
         $objCtrClientes = new ControllerCliente();
@@ -177,6 +177,8 @@
         ?>
       </tbody>
     </table>
+  <!-- 
+  elimar a cliente -->
     <?php
     if (isset($_GET['eliminar'])) {
       $objCtrClientes = new ControllerCliente;
@@ -257,6 +259,8 @@
             <button type="submit" class="btn btn-outline-primary" id="boton1">Actualizar</button>
             <button type="button" class="btn btn-outline-danger" id="boton2" data-dismiss="modal">Close</button>
           </div>
+
+
           <?php
 
           if (isset($_POST['txtMCedula'])) {
@@ -288,14 +292,13 @@
         language: {
           search: "Cliente ",
           zeroRecords: "No hay resultados",
-          previous: "Pr&eacute;c&eacute;dent",
-          next: "sebas"
+          previous: "Pr&eacute;c&eacute;dent"
 
         }
       });
     });
   </script>
-  <script src="view/js/crud.js"></script>
+  <script src="view/js/crud.Clientes.js"></script>
   <script src="view/js/validacion.js"></script>
 
 

@@ -34,8 +34,11 @@
                 require_once "view/module/RegistroDeVehiculos.php";
                 break;
             /* -----------------------reporte -------------------------*/
-            case 'reporte':
-                require_once "view/module/reporte.php";
+            case 'reporteCliente':
+                require_once "view/module/reporteClientes.php";
+                break;
+            case 'reporteUsuarios':
+                require_once "view/module/reporteUsuarios.php";
                 break;
             case 'menuPrincipal':
                     require_once "view/module/menuPrincipal.php";
