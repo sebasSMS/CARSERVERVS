@@ -165,6 +165,7 @@ div.botones{
 #boton4:hover {
     box-shadow: 0 12px 16px 0 rgba(235, 248, 51,  0.342), 0 17px 50px 0 rgba(235, 248, 51,  0.342);
 } 
+
 /*----------- mediaqueries---------------------*/
 @media screen and (max-width:575px) {
     div.container{

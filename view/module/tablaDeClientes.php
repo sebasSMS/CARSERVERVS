@@ -18,7 +18,7 @@
   <link rel="stylesheet" href="view/css/sweetalert2.min.css">
   <script src="view/js/sweetalert2.all.min.js"></script>
   <!-- extencion de iconos de el mini menu -->
-  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>  
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
 
 
 </head>
@@ -31,110 +31,110 @@
 
   <!-- ini menu -->
   <section class="menu menu--circle">
-        <input type="checkbox" id="menu__active" />
-        <label for="menu__active" class="menu__active">
-          <div class="menu__toggle">
-            <div class="icon">
-              <div class="hamburger"></div>
+    <input type="checkbox" id="menu__active" />
+    <label for="menu__active" class="menu__active">
+      <div class="menu__toggle">
+        <div class="icon">
+          <div class="hamburger"></div>
+        </div>
+      </div>
+      <input type="radio" name="arrow--up" id="degree--up-0" />
+      <input type="radio" name="arrow--up" id="degree--up-1" />
+      <input type="radio" name="arrow--up" id="degree--up-2" />
+      <div class="menu__listings">
+        <ul class="circle">
+          <li>
+            <div class="placeholder">
+              <div class="upside">
+                <a href="" class="button"><i class="fa fa-address-card"></i></a>
+              </div>
             </div>
-          </div>
-          <input type="radio" name="arrow--up" id="degree--up-0" />
-          <input type="radio" name="arrow--up" id="degree--up-1" />
-          <input type="radio" name="arrow--up" id="degree--up-2" />
-          <div class="menu__listings">
-            <ul class="circle">
-              <li>
-                <div class="placeholder">
-                  <div class="upside">
-                    <a href="" class="button"><i class="fa fa-address-card"></i></a>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="placeholder">
-                  <div class="upside">
-                    <a href="index.php?ruta=vehiculos" class="button"><i class="fa fa-car"></i></a>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="placeholder">
-                  <div class="upside">
-                    <a href="#">&nbsp</a>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="placeholder">
-                  <div class="upside">
-                    <a href="view/module/unload.php"  class="button"><i class="fa fa-sign-out"></i></a>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="placeholder">
-                  <div class="upside">
-                    <a href="index.php?ruta=cliente" class="button"><i class="fa fa-vcard"></i></a>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="placeholder">
-                  <div class="upside">
-                    <a href="index.php?ruta=tableUsuario" class="button"><i class="fa fa-table"></i></a>
-                    <a href="#" class="miniBoton"><i class="fa fa-vcard-o"></i></a>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="placeholder">
-                  <div class="upside">
-                    <a href="index.php?ruta=tableVehiculos" class="button"><i class="fa fa-table"></i></a>
-                    <a href="" class="miniBoton" id=""><i class="fa fa-car" ></i></a>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="placeholder">
-                  <div class="upside">
-                    <a href="index.php?ruta=tableCliente" class="button"><i class="fa fa-table"></i> </a>
-                    <a href="#" class="miniBoton"><i class="fa fa-vcard"></i> </a>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="placeholder">
-                  <div class="upside">
-                    <a href="index.php?ruta=menuPrincipal" class="button"><i class="fa fa-user"></i></a>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="placeholder">
-                  <div class="upside">
-                    <a href="index.php?ruta=usuario" class="button"><i class="fa fa-vcard-o"></i></a>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div class="menu__arrow menu__arrow--top">
-            <ul>
-              <li>
-                <label for="degree--up-0">
-                  <div class="arrow"></div>
-                </label>
-                <label for="degree--up-1">
-                  <div class="arrow"></div>
-                </label>
-                <label for="degree--up-2">
-                  <div class="arrow"></div>
-                </label>
-              </li>
-            </ul>
-          </div>
-        </label>
-    </section>
+          </li>
+          <li>
+            <div class="placeholder">
+              <div class="upside">
+                <a href="index.php?ruta=vehiculos" class="button"><i class="fa fa-car"></i></a>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="placeholder">
+              <div class="upside">
+                <a href="#">&nbsp</a>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="placeholder">
+              <div class="upside">
+                <a href="view/module/unload.php" class="button"><i class="fa fa-sign-out"></i></a>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="placeholder">
+              <div class="upside">
+                <a href="index.php?ruta=cliente" class="button"><i class="fa fa-vcard"></i></a>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="placeholder">
+              <div class="upside">
+                <a href="index.php?ruta=tableUsuario" class="button"><i class="fa fa-table"></i></a>
+                <a href="#" class="miniBoton"><i class="fa fa-vcard-o"></i></a>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="placeholder">
+              <div class="upside">
+                <a href="index.php?ruta=tableVehiculos" class="button"><i class="fa fa-table"></i></a>
+                <a href="" class="miniBoton" id=""><i class="fa fa-car"></i></a>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="placeholder">
+              <div class="upside">
+                <a href="index.php?ruta=tableCliente" class="button"><i class="fa fa-table"></i> </a>
+                <a href="#" class="miniBoton"><i class="fa fa-vcard"></i> </a>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="placeholder">
+              <div class="upside">
+                <a href="index.php?ruta=menuPrincipal" class="button"><i class="fa fa-user"></i></a>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="placeholder">
+              <div class="upside">
+                <a href="index.php?ruta=usuario" class="button"><i class="fa fa-vcard-o"></i></a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="menu__arrow menu__arrow--top">
+        <ul>
+          <li>
+            <label for="degree--up-0">
+              <div class="arrow"></div>
+            </label>
+            <label for="degree--up-1">
+              <div class="arrow"></div>
+            </label>
+            <label for="degree--up-2">
+              <div class="arrow"></div>
+            </label>
+          </li>
+        </ul>
+      </div>
+    </label>
+  </section>
 
   <div class="container ">
     <h1 class="titulo">Tabla de Clientes</h1>
@@ -178,10 +178,10 @@
       </tbody>
     </table>
     <?php
-      if (isset($_GET['eliminar'] )){
-        $objCtrClientes = new ControllerCliente;
-        $objCtrClientes -> ctrEliminarCliente();
-      }
+    if (isset($_GET['eliminar'])) {
+      $objCtrClientes = new ControllerCliente;
+      $objCtrClientes->ctrEliminarCliente();
+    }
     ?>
 
 
@@ -284,7 +284,15 @@
   <script src="cdn.datatables.net/plug-ins/1.12.1/i18n/es-CO.json"></script>
   <script>
     $(document).ready(function() {
-      $('#clientes').DataTable();
+      $('#clientes').DataTable({
+        language: {
+          search: "Cliente ",
+          zeroRecords: "No hay resultados",
+          previous: "Pr&eacute;c&eacute;dent",
+          next: "sebas"
+
+        }
+      });
     });
   </script>
   <script src="view/js/crud.js"></script>

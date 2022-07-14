@@ -13,7 +13,7 @@
     
         public function __construct($objDtoCliente){
             $this-> cedula = $objDtoCliente-> getCedula();
-            $this->nombre  =  $objDtoCliente-> getNombre() ;
+            $this-> nombre  =  $objDtoCliente-> getNombre() ;
             $this-> apellido =  $objDtoCliente-> getApellido() ;
             $this-> celular =  $objDtoCliente->  getCelular () ;
             $this-> correo  =  $objDtoCliente-> getCorreo() ;
@@ -46,7 +46,8 @@
             return $this -> estado;
 
 
-        }/* fin de insertar producto */
+        }/* fin de insertar cliente */
+        
         public function mdlListarClientes(){
             $sql="CALL `splListarClientes`( );";
             $resultset= false;

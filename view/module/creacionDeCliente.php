@@ -18,9 +18,7 @@
   <link rel="stylesheet" href="view/css/sweetalert2.min.css">
   <script src="view/js/sweetalert2.all.min.js"></script>
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
-  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
-  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
-  <!-- DIRECCION PARA LOGOS EN CLOUDFLARE                    --> 
+  <!-- DIRECCION PARA LOGOS EN CLOUDFLARE                    -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
 
   <script src="view/js/validacion.js"></script>
@@ -136,7 +134,7 @@
 
   <!-- formulario -->
   <div class="col-md-12">
-  
+
 
 
     <h1 class="titulo col-12 col-sm-12 col-md-12 ">Registro de Clientes</h1>
@@ -151,15 +149,15 @@
                 <i class=" iconoDeError  fas fa-times-circle"></i>
               </div>
               <p class="error">La cedula debe tener de 7 a 10 digitos y no puede contener ni letras ni caracteres especiales</p>
-              
+
             </div>
-            
+
             <div class="form-groun col-12 col-sm-6 col-md-6" id="grupoCorreo">
               <label for="pwd" class="subtitulos">Correo </label>
               <div class="negacion">
                 <input type="email" class="form-control" name="txtCorreo" id="txtCorreo">
                 <i class=" iconoDeError  fas fa-times-circle" id="negacion"></i>
-                
+
               </div>
               <p class="error">Por favor ingrese el correo </p>
 
@@ -171,7 +169,7 @@
               <div class="negacion">
                 <input type="text" class="form-control" name="txtNombre" id="txtNombre">
                 <i class="  iconoDeError fas fa-times-circle"></i>
-                
+
               </div>
               <p class="error">El usuario tiene que ser de 4 a 16 dígitos y no puede contener numeros y ni caracteres especiales.</p>
 
@@ -181,7 +179,7 @@
               <div class="negacion">
                 <input type="number" class="form-control" name="txtCelular" id="txtCelular">
                 <i class="  iconoDeError fas fa-times-circle"></i>
-                
+
               </div>
               <p class="error">El telefono solo puede contener numeros y el maximo son 14 dígitos.</p>
 
@@ -193,7 +191,7 @@
               <div class="negacion">
                 <input type="text" class="form-control" name="txtApellido" id="txtApellido">
                 <i class="  iconoDeError fas fa-times-circle"></i>
-                
+
               </div>
               <p class="error">El apellido tiene que ser de 4 a 16 dígitos y no puede contener numeros y ni caracteres especiales.</p>
 
@@ -203,7 +201,7 @@
               <div class="negacion">
                 <input type="text" class="form-control" name="txtPlaca" id="txtPlaca">
                 <i class="  iconoDeError fas fa-times-circle"></i>
-                
+
               </div>
               <p class="error">la placa solo puede llevar numeros, letras y giones</p>
 
@@ -219,6 +217,7 @@
 
 
         </div>
+      </form>
     </div>
 
     </form>
@@ -240,7 +239,7 @@
 
   </div>
   </div>
-  
+
 
   <script src="view/js/formularios.js"></script>
   <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>

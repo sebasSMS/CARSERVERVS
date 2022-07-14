@@ -1,22 +1,23 @@
 <?php
-    class Clientes{
-
+    class Usuario{
         private $cedula;
         private $nombre;
         private $apellido;
         private $celular;
         private $correo;
-        private $placa;
+        private $rol;
 
-        public function __construct($cedula, $nombre, $apellido, $celular, $correo, $placa) {
+        public function  __construct($cedula, $nombre, $apellido, $celular, $correo,$rol){
             $this-> cedula = $cedula;
             $this-> nombre = $nombre;
             $this-> apellido = $apellido;
             $this-> celular = $celular;
             $this-> correo = $correo;
-            $this-> placa = $placa;
+            $this-> rol = $rol;
+            
 
         }
+        /* get */
         public function getCedula(){
             return $this -> cedula;
         }
@@ -32,10 +33,10 @@
         public function getCorreo(){
             return $this -> correo;
         }
-        public function getPlaca(){
-            return $this -> placa;
+        public function getRol(){
+            return $this -> rol;
         }
-      /*   set */
+       /*  set */
         public function setCedula($cedula){
             $this -> cedula = $cedula;
         }
@@ -51,11 +52,9 @@
         public function setCorreo($correo){
             $this -> correo = $correo;
         }
-        
-        public function setPlaca($placa){
-            $this->  placa = $placa;
+        public function set($rol){
+            $this -> rol = $rol;
         }
-
 
     }
 ?>

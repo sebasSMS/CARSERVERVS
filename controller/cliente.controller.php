@@ -4,14 +4,26 @@
 
             $ojbDtoCliente = new Clientes($cedula,$nombre,$apellido,$celular,$correo,$placa);
             $ojbDaoCliente = new ModelClientes($ojbDtoCliente);
-            if ($ojbDaoCliente -> mldInsertarCliente()){
-                echo "<script>
-                Swal.fire(
-                    'GOOD',
-                    'Usuario insertado',
-                    'success'
-                  )
-                ;</script>";
+            if ($ojbDaoCliente -> mldInsertarCliente() == true){
+                echo"
+                <script>
+                Swal.fire({
+                    title: 'good',
+                    text: 'Usuario insertado',
+                    icon: 'success',
+                    showCancelButton: false,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Ok!'
+                  }).then((result) => {
+                    if (result.isConfirmed) {
+                        window.location='index.php?ruta=cliente';
+                    }else{
+                        window.location='index.php?ruta=cliente';
+                    }
+                  })
+                </script>
+                ";
 
             }else{
                 echo "cliente no insertado";
