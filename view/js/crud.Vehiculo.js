@@ -11,75 +11,75 @@ const expresiones = {
 
 }
 const campos = {
-    placa:false,
-    marca:false,
-    cilindraje:false,
-    linea:false,
-    clase:false,
-    modelo:false,
-    nueroDeMotor:false
+    placa: false,
+    marca: false,
+    cilindraje: false,
+    linea: false,
+    clase: false,
+    modelo: false,
+    nueroDeMotor: false
 }
 const validarFormulario = (e) => {
-    switch (e.target.name){
+    switch (e.target.name) {
         case "txtPlaca":
             validarCampo(expresiones.placa, e.target, 'Placa');
-        break;
+            break;
         case "txtMarca":
             validarCampo(expresiones.marca, e.target, 'Marca');
-        break;
+            break;
         case "txtCilindraje":
             validarCampo(expresiones.cilindraje, e.target, 'Cilindraje');
-        break;
+            break;
         case "txtLinea":
             validarCampo(expresiones.linea, e.target, 'Linea');
-        break;
+            break;
         case "txtClase":
             validarCampo(expresiones.clase, e.target, 'Clase');
-        break;
+            break;
         case "txtModelo":
             validarCampo(expresiones.modelo, e.target, 'Modelo');
-        break;
+            break;
         case "txtNumeroDeMotor":
             validarCampo(expresiones.nueroDeMotor, e.target, 'Numero');
-        break;
+            break;
     }
-    
+
 }
-const validarCampo = (expresiones,input,campo) => {
-    if(expresiones.test(input.value)){
+const validarCampo = (expresiones, input, campo) => {
+    if (expresiones.test(input.value)) {
         document.getElementById(`grupo${campo}`).classList.remove('form-groun-incorrecto');
         document.getElementById(`grupo${campo}`).classList.add('form-groun-correcto');
         document.querySelector(`#grupo${campo} i`).classList.add('fa-check-circle');
-		document.querySelector(`#grupo${campo} i`).classList.remove('fa-times-circle');
+        document.querySelector(`#grupo${campo} i`).classList.remove('fa-times-circle');
         document.querySelector(`#grupo${campo} .error`).classList.remove('error-activo');
         campos[campo] = true;
-    }else{
+    } else {
         document.getElementById(`grupo${campo}`).classList.add('form-groun-incorrecto');
         document.getElementById(`grupo${campo}`).classList.remove('form-groun-correcto');
         document.querySelector(`#grupo${campo} i`).classList.add('fa-times-circle');
-		document.querySelector(`#grupo${campo} i`).classList.remove('fa-check-circle');
+        document.querySelector(`#grupo${campo} i`).classList.remove('fa-check-circle');
         document.querySelector(`#grupo${campo} .error`).classList.add('error-activo');
         campos[campo] = false;
     }
 
 }
-inputs.forEach((input) =>{
+inputs.forEach((input) => {
     input.addEventListener('keyup', validarFormulario);
     input.addEventListener('blur', validarFormulario);
-    
+
 })
 function modificar(obj) {
     /* llamamos los campos del formulario modificar */
     mPlaca = document.getElementById('txtMPlaca');
-    mMarca= document.getElementById('txtMMarca');
+    mMarca = document.getElementById('txtMMarca');
     mCilindraje = document.getElementById('txtMCilindraje');
     mLinea = document.getElementById('txtMLinea');
     mClase = document.getElementById('txtMClase');
     mModelo = document.getElementById('txtMModelo');
     mMotor = document.getElementById('txtMNumeroDeMotor');
-  
+
     /* asignamos los datos a los campos de el formulario modificar */
-  
+
     mPlaca.value = obj.children[0].innerHTML;
     mMarca.value = obj.children[1].innerHTML;
     mCilindraje.value = obj.children[2].innerHTML;
@@ -87,5 +87,27 @@ function modificar(obj) {
     mClase.value = obj.children[4].innerHTML;
     mModelo.value = obj.children[5].innerHTML;
     mMotor.value = obj.children[6].innerHTML;
+}
+function eliminar(obj) {
+    Swal.fire({
+        title: 'Are you sure?',
+        text: "You won't be able to revert this!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, delete it!',
+
+    }).then((result) => {
+
+        if (result.isConfirmed) {
+            Swal.fire(
+                window.location = "index.php?ruta=tableVehiculos&eliminar=" + obj.children[0].innerHTML
+            )
+        }
+        
+    })
+
+
 }
 

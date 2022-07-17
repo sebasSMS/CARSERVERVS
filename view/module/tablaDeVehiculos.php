@@ -173,6 +173,12 @@
         ?>
 
       </tbody>
+      <?php
+      if (isset($_GET['eliminar'])) {
+        $objCtrVehiculo = new ControllerVehiculo;
+        $objCtrVehiculo->ctrEliminarVehiculo();
+      }
+      ?>
     </table>
     <div class="modal  fade" id="ModificarModal" tabindex="-1" aria-labelledby="ModificarModalLabel" aria-hidden="true">
       <div class="modal-dialog">

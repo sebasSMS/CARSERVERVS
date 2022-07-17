@@ -137,6 +137,27 @@
                     ;</script>
                     ";
             }
+        }        
+        public function ctrEliminarVehiculo(){
+            $ojbDtoVehiculo = new Vehiculos(
+                $_GET['eliminar'],
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+
+
+            );
+
+            $ojbDaoVehiculo = new ModelVehiculo($ojbDtoVehiculo);
+            ($ojbDaoVehiculo -> mdlEliminarVehiculos());
+            echo"<script>
+                window.location='index.php?ruta=tableVehiculos';
+            </script>";
+
+      
         }
 
 

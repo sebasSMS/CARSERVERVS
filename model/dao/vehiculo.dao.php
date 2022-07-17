@@ -86,6 +86,26 @@
             return $this -> estado;
 
         }
+        public function mdlEliminarVehiculos(){
+            $sql="CALL `splEliminarVehiculo`(?);";
+            $this -> estado = false;
+
+            try {
+                /* llamamos a la conexion  */
+                $con = new Conexion();
+                $stmt = $con -> conexion() -> prepare($sql);
+                $stmt -> bindParam(1, $this->placa, PDO::PARAM_INT );
+                $stmt -> execute();
+                $this -> estado = true;
+                
+
+
+            } catch (PDOException $ex) {
+                echo "Hay un error en el dao al eliminar el vehiculo " . $ex -> getMessage();
+            }
+            return $this -> estado;
+
+        } 
         
     }
 ?>

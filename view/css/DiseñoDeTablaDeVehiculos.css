@@ -146,6 +146,6 @@ div.botones {
     background: linear-gradient(to top, #0073ff2d, #00e0f0); 
      
 }
-#clientes_length{
+.dataTables_length{
     display:none;
 }
