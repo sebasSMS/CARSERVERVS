@@ -21,7 +21,7 @@
         <a name="" id="bones" class="btn btn-primary" href="index.php?ruta=usuario" role="button"> Crear Usuarios <img src="view/img/usuarios.png" width="80%" height="100%"  alt=""></a>
         <a name="" id="bones" class="btn btn-primary" href="index.php?ruta=cliente" role="button"> Crear clientes <img src="view/img/clientes.png" alt="" width="80%" height="95%"></a>
         <a name="" id="bones" class="btn btn-primary" href="index.php?ruta=vehiculos" role="button"> Crear vehiculo <img src="view/img/car.png" width="70%" height="100%" alt=""></a>
-        <a name="" id="bones" class="btn btn-primary" href="#" role="button">  Crear Servicio <img src="view/img/servicio.png" alt="" width="70%" height="70%"></a>
+        <a name="" id="bones" class="btn btn-primary" href="index.php?ruta=reporteGeneral" role="button">  Crear Servicio <img src="view/img/servicio.png" alt="" width="70%" height="70%"></a>
 
 
         

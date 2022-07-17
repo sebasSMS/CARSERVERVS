@@ -23,6 +23,9 @@
             case 'vehiculos':
                 require_once "view/module/RegistroDeVehiculos.php";
                 break;
+            case 'reporteGeneral':
+                require_once "view/module/reporteGeneral.php";
+                break;
                /*-------------------  menu de informes--------------------------- */
             case 'tableUsuario':
                 require_once "view/module/tablaDeEmpleado.php";
@@ -56,4 +59,3 @@
     }else{
         require_once "view/module/menuPrincipal.php";
     }
-?>
