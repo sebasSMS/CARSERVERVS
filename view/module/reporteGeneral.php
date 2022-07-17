@@ -62,7 +62,7 @@
 
             </div>
           </div>
-          <div class="form-groun col-12 col-sm-6 col-md-12" id="grupoDescripcion">
+          <div class="form-groun col-12 col-sm-12 col-md-12" id="grupoDescripcion">
             <label for="pwd" class="subtitulos">Descripcion de la Solicitud </label>
             <br>
             <div class="negacion">
