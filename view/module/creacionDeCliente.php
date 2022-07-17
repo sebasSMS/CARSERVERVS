@@ -21,7 +21,7 @@
   <!-- DIRECCION PARA LOGOS EN CLOUDFLARE                    -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
 
-  <script src="view/js/validacion.js"></script>
+
 </head>
 
 <body>
@@ -171,7 +171,7 @@
                 <i class="  iconoDeError fas fa-times-circle"></i>
 
               </div>
-              <p class="error">El usuario tiene que ser de 4 a 16 dígitos y no puede contener numeros y ni caracteres especiales.</p>
+              <p class="error">El usuario tiene que ser de 4 a 16 dígitos y no puede contener numeros  ni caracteres especiales.</p>
 
             </div>
             <div class="form-groun col-12 col-sm-6 col-md-6" id="grupoCelular">
@@ -242,6 +242,7 @@
 
 
   <script src="view/js/formularios.js"></script>
+  <script src="view/js/validacion.js"></script>
   <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
 
 

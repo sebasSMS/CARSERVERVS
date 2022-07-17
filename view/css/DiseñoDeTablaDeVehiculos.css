@@ -1,64 +1,151 @@
-body{
-    background: #1FA2FF;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #3decd5, #12D8FA, #1FA2FF);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #3decd5, #12D8FA, #1FA2FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    
-    font-family:'Times New Roman', Times, serif;
+body {
+    background: #1FA2FF;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #3decd5, #12D8FA, #1FA2FF);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #3decd5, #12D8FA, #1FA2FF);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    font-family: 'Times New Roman', Times, serif;
 }
-.titulo{
-    margin-left:5px;
-    font-family:'Times New Roman', Times, serif;
-}
-.buscador{
-    margin-bottom: 12px;
-    border-radius: 7px;
-    border-color:darkturquoise;
+/* ----------------------.titulo de la tabla-------------------- */
+
+.titulo {
+    margin-left: 5px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
 }
 
-thead{
-    
+
+thead {
+
     background-color: blue;
-    color: azure ;
+    color: azure;
 
-    
-}
-tbody{
-    background: #00c6ff;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #0072ff, #00c6ff);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #0072ff, #00c6ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    
+
 }
 
+tbody {
+    background: #00c6ff;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #0072ff, #00c6ff);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #0072ff, #00c6ff);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
-.form-control{
+}
+
+
+.form-control {
     width: 70%;
-    height: 35px;
+    height: 30px;
     margin-left: 40px;
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.916);
     border: 1px solid rgba(0, 0, 0, 0.501);
     border-radius: 7px;
     line-height: 45px;
-    padding:  0 40px 0 10px;
-    transform: .3s  ease all;
+    padding: 0 40px 0 10px;
+    transform: .3s ease all;
 }
-.form-control:focus{
-    border:rgba(56, 53, 223, 0.322);
-    border: 2px solid  rgba(49, 46, 196, 0.692);
+
+.form-control:focus {
+    border: rgba(56, 53, 223, 0.322);
+    border: 2px solid rgba(49, 46, 196, 0.692);
     outline: none;
-    box-shadow: 3px 0px 30px rgba(163, 163, 163,0.4);
+    box-shadow: 3px 0px 30px rgba(163, 163, 163, 0.4);
 
 }
-.cedula{
+
+.cedula {
     margin-left: 2px;
     margin-top: 1px;
     font-size: 20px;
     font-weight: 70;
 }
-#Usuario{
+
+#Usuario {
     margin: 1px 2px;
     margin-bottom: 5px;
     width: 170px;
-    height: 30px;  
+    height: 30px;
 
 }
 
+/* ----------------------botones------------------- */
+div.botones {
+    margin-top: 30px;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+
+}
+
+.btn {
+
+    width: 20%;
+    margin: auto;
+
+}
+
+/* ----------------movimiento de los botones----------------*/
+
+/* ------- botones---------- */
+
+/* sombra de los botones */
+#boton1:hover {
+
+    box-shadow: 0 12px 16px 0 rgba(3, 56, 201, 0.342), 0 17px 50px 0 rgba(48, 98, 236, 0.342);
+}
+
+#boton2:hover {
+
+    box-shadow: 0 12px 16px 0 rgba(255, 6, 6, 0.342), 0 17px 50px 0 rgba(255, 24, 24, 0.19);
+}
+
+#boton3:hover {
+
+    box-shadow: 0 12px 16px 0 rgba(15, 148, 37, 0.342), 0 17px 50px 0 rgba(15, 148, 37, 0.342);
+}
+
+.btn:active {
+    box-shadow: rgba(0, 0, 0, .2);
+    transform: translateY(2px);
+}
+
+/* -----------------------boton de reporte de excel---------------------- */
+#salir {
+    position: relative;
+    width: 5%;
+    margin-bottom: 3px;
+    margin-left: 20px;
+}
+
+#salir:hover {
+    background: #ED213A;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #93291E, #ED213A);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #93291E, #ED213A);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: rgba(0, 0, 0, 0.512);
+    box-shadow: 0 10px 12px 0 rgba(243, 33, 33, 0.342), 0 13px 40px 0 rgba(48, 98, 236, 0.342);
+}
+
+#salir:active {
+    box-shadow: rgba(0, 0, 0, .2);
+    transform: translateY(2px);
+}
+
+/*----------------- diseño del modal de modifiar cliente -----------------*/
+#modalC {
+    
+    background: -webkit-linear-gradient(to top, #0073ff2d, #00e0f0); 
+    background: linear-gradient(to top, #0073ff2d, #00e0f0); 
+     
+}
+#clientes_length{
+    display:none;
+}

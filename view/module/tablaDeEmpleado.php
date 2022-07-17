@@ -274,6 +274,7 @@
                 </div>
 
                 <?php
+                /* modificar usuario */
 
                 if (isset($_POST['txtMCedula'])) {
                   $objCtrUsuario = new ControllerUsuario();

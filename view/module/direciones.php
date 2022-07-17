@@ -31,7 +31,7 @@
                 require_once "view/module/tablaDeClientes.php";
                 break;
             case 'tableVehiculos':
-                require_once "view/module/RegistroDeVehiculos.php";
+                require_once "view/module/tablaDeVehiculos.php";
                 break;
             /* -----------------------reporte -------------------------*/
             case 'reporteCliente':
@@ -40,6 +40,9 @@
             case 'reporteUsuarios':
                 require_once "view/module/reporteUsuarios.php";
                 break;
+                case 'reporteVehiculo':
+                    require_once "view/module/reporteDeVehiculo.php";
+                    break;
             case 'menuPrincipal':
                     require_once "view/module/menuPrincipal.php";
                     break;

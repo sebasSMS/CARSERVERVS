@@ -266,7 +266,6 @@
           if (isset($_POST['txtMCedula'])) {
             $objCtrClientes = new ControllerCliente();
             $objCtrClientes->ctrModificarCliente();
-            echo "hooo";
           }
           ?>
 

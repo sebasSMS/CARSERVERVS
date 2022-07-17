@@ -20,7 +20,7 @@
         
         <a name="" id="bones" class="btn btn-primary" href="index.php?ruta=tableUsuario" role="button" > Informes de Usuarios <img src="view/img/userTable.png" alt="" width="60%" height="70%"> </a>
         <a name="" id="bones" class="btn btn-primary" href="index.php?ruta=tableCliente" role="button"> Informes de clientes <img src="view/img/clienTable.png" alt="" width="60%" height="70%"></a>
-        <a name="" id="bones" class="btn btn-primary" href="RegistroDeVehiculos.html" role="button"> Informes de vehiculos <img src="view/img/carTable.png" width="70%" height="70%" alt=""></a>
+        <a name="" id="bones" class="btn btn-primary" href="index.php?ruta=tableVehiculos" role="button"> Informes de vehiculos <img src="view/img/carTable.png" width="70%" height="70%" ></a>
         
         
 

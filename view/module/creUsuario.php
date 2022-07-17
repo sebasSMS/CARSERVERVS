@@ -10,6 +10,7 @@
     <!-------alertas de javascript sweetalert2 -->
   <link rel="stylesheet" href="view/css/sweetalert2.min.css">
   <script src="view/js/sweetalert2.all.min.js"></script>
+ <!--   diseño de css personales -->
   <link rel="stylesheet" href="view/css/DiseñoCreUsuario.css">
   <link rel="stylesheet" href="view/css/disenoDeMenu.css">
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
