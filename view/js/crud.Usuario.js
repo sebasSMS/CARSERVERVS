@@ -1,3 +1,5 @@
+
+
 /* capturamso los elementos de la tabla USUARIO con el atributo (obj) */
 function modificar(obj) {
     /* llamamos los campos del formulario modificar */

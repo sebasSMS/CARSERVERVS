@@ -241,8 +241,7 @@
   </div>
 
 
-  <script src="view/js/formularios.js"></script>
-  <script src="view/js/validacion.js"></script>
+  <script src="view/js/crud.Clientes.js"></script>
   <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
 
 

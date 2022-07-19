@@ -177,7 +177,7 @@
             <div class="form-groun col-12 col-sm-6 col-md-6 " id="grupoApellido">
               <label for="pwd" class="subtitulos">Apellido</label>
               <div class="negacion">
-                <input type="text" class="form-control" name="txtApellido" id="txtApellido" required>
+                <input type="text" class="form-control" name="txtApellido" id="txtApellido" >
                 <i class="  iconoDeError fas fa-times-circle"></i>
 
               </div>
@@ -239,7 +239,9 @@
 
   </div>
 
-  <script src="view/js/formularios.js"></script>
+  <script src="view/js/crud.Usuario.js"></script>
+  <script src="view/js/formulariosU.js"></script>
+
   <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
 
 </body>

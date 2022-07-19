@@ -11,15 +11,18 @@
                     title: 'good',
                     text: 'Usuario insertado',
                     icon: 'success',
+                    timer:4000,
+                    timerProgressBar:true,
                     showCancelButton: false,
                     confirmButtonColor: '#3085d6',
                     cancelButtonColor: '#d33',
                     confirmButtonText: 'Ok!'
                   }).then((result) => {
                     if (result.isConfirmed) {
-                        window.location='index.php?ruta=cliente';
+                        window.location='index.php?ruta=tableCliente';
                     }else{
-                        window.location='index.php?ruta=cliente';
+                        window.location='index.php?ruta=tableCliente';
+
                     }
                   })
                 </script>
@@ -61,9 +64,11 @@
                 echo"
                     <script>
                     Swal.fire({
-                        title: 'EXTIO',
-                        text: 'SU USUARIO A SIDO MODIFICADO CON EXITO',
+                        title: 'GOOD',
+                        text: ' CLIENTE MODIFICADO',
                         icon: 'success',
+                        timerProgressBar:true,
+                        timer:4000,
                         showCancelButton: false,
                         confirmButtonColor: '#3085d6',
                         cancelButtonColor: '#d33',

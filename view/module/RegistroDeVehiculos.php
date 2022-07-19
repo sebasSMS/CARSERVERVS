@@ -230,6 +230,7 @@
     </div>
   </div>
   <script src="view/js/crud.Vehiculo.js"></script>
+  <script src="view/js/formularioV.js"></script>
   <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
 
 </body>

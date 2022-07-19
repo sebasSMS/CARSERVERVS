@@ -135,10 +135,10 @@
       <thead>
         <tr>
           <th>Placa</th>
-          <th>Clase</th>
           <th>Marca </th>
           <th>Cilindraje </th>
           <th>Lina </th>
+          <th>Clase</th>
           <th>Modelo </th>
           <th>Numero del Motor</th>
           <th>Funciones</th>

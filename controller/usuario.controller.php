@@ -8,18 +8,20 @@
                 echo"
                 <script>
                 Swal.fire({
-                    title: 'good',
-                    text: ' Usuario insertado',
+                    title: 'GOOD',
+                    text: ' USUARIO INSERTADO',
                     icon: 'success',
+                    timerProgressBar:true,
+                    timer:4000,
                     showCancelButton: false,
                     confirmButtonColor: '#3085d6',
                     cancelButtonColor: '#d33',
                     confirmButtonText: 'Ok!'
                   }).then((result) => {
                     if (result.isConfirmed) {
-                        window.location='index.php?ruta=cliente';
+                        window.location='index.php?ruta=tableUsuario';
                     }else{
-                        window.location='index.php?ruta=cliente';
+                        window.location='index.php?ruta=tableUsuario';
                     }
                   })
                 </script>
@@ -33,7 +35,7 @@
 
         }
         
-        public function ctrMostrarRol(){ #Controlador de mostrar usuario
+        public function ctrMostrarRol(){ 
             $lista = false;
             try {
                 $objDtoUsuario = new Usuario(NULL,NULL,NULL,NULL,NULL,NULL);
@@ -92,10 +94,7 @@
                       })
                     </script>
                     ";
-            }
-                
-            
-            else{
+            }else{
                 echo "<script>
                     Swal.fire(
                         'GOOD',

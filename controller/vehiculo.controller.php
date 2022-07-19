@@ -19,9 +19,9 @@
                     confirmButtonText: 'Ok!'
                   }).then((result) => {
                     if (result.isConfirmed) {
-                        window.location='index.php?ruta=vehiculos';
+                        window.location='index.php?ruta=tableVehiculos';
                     }else{
-                        window.location='index.php?ruta=vehiculos';
+                        window.location='index.php?ruta=tableVehiculos';
                     }
                   })
                 </script>
@@ -46,52 +46,7 @@
             return $array;
 
         }
-                public function ctrModificarUsuario(){
-            $ojbDtoUsuario = new Usuario(
-                $_POST['txtMCedula'],
-                $_POST['txtMNombre'],
-                $_POST['txtMApellido'],
-                $_POST['txtMCelular'],
-                $_POST['txtMCorreo'],
-                $_POST['txtMRol']
-                
 
-            );
-    
-
-            $ojbDaoUsuario = new ModelUsuario($ojbDtoUsuario);
-            if ($ojbDaoUsuario -> mdlModificarUsuario()==  true){
-
-                echo"
-                    <script>
-                    Swal.fire({
-                        title: 'EXTIO',
-                        text: 'SU USUARIO A SIDO MODIFICADO CON EXITO',
-                        icon: 'success',
-                        showCancelButton: false,
-                        confirmButtonColor: '#3085d6',
-                        cancelButtonColor: '#d33',
-                        confirmButtonText: 'Yes, delete it!'
-                      }).then((result) => {
-                        if (result.isConfirmed) {
-                            window.location='index.php?ruta=tableUsuario';
-                        }else{
-                            window.location='index.php?ruta=tableUsuario';
-                        }
-                      })
-                    </script>
-                    ";
-            }else{
-                echo "<script>
-                    Swal.fire(
-                        'GOOD',
-                        'Usuario no se pudo Modificado',
-                        'danger'
-                      )
-                    ;</script>
-                    ";
-            }
-        }
         public function ctrModificarVehiculo(){
             $ojbDtoVehiculo = new Vehiculos(
                 $_POST['txtMPlaca'],
@@ -111,7 +66,7 @@
                     <script>
                     Swal.fire({
                         title: 'EXTIO',
-                        text: 'SU Vehiculo A SIDO MODIFICADO CON EXITO',
+                        text: 'SU VEHICULO A SIDO MODIFICADO CON EXITO',
                         icon: 'success',
                         showCancelButton: false,
                         confirmButtonColor: '#3085d6',

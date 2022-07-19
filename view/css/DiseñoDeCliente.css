@@ -15,7 +15,7 @@ body{
 }
 div.container{
     width:auto;
-    height: 360px;
+    height: auto;
     border: 1px;
     background: #00c6ff;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to left, #0072ff, #00c6ff);  /* Chrome 10-25, Safari 5.1-6 */
@@ -85,10 +85,10 @@ div.form-groun{
 .error{
     font-size: 12px;
 	margin-bottom: 0;
-	display: none;
+    visibility: hidden;
 }
 .error-activo{
-    display: block;
+    visibility: visible;
 
 }
 .iconoDeError{
