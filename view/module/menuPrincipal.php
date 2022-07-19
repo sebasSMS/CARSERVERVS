@@ -5,9 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Menu Principal</title>
     <link rel="stylesheet" href="view/css/estilos.css">
-    
+
 </head>
 
 <body>
@@ -43,9 +44,9 @@
             <li>
                 <a href="#">
                     <span class="iconos">
-                        <ion-icon name="logo-apple"></ion-icon>
+                        <ion-icon name="car-sport-outline"></ion-icon>
                     </span>
-                    <span class="title">brand name</span>
+                    <span class="title">Car serviser </span>
                 </a>
             </li>
             <li>
@@ -93,7 +94,7 @@
         </ul>
 
     </div>
-    
+
 
     </div>
     <footer class="main-footer">
@@ -103,9 +104,9 @@
         <strong>Copyright &copy; 2022 <a href="http://www.sena.edu.co">Sena</a>.</strong> Todos los derechos reservados
 
     </footer>
-    
 
-   
+
+
     </div>
     <!-- menu -->
     <script src="view/js/menu.js"></script>
@@ -117,7 +118,7 @@
     <!-- Bootstrap 3.3.7 -->
     <script src="view/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- SlimScroll -->
-   
+
 
 
 

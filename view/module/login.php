@@ -64,6 +64,8 @@
     $objCon->ctrLogin($user, $pass);
   }
   ?>
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script src="view/js/login.js"></script>
   
 
 </body>

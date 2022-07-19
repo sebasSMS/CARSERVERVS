@@ -11,49 +11,49 @@ const expresiones = {
 
 }
 const campos = {
-    placa: false,
-    marca: false,
-    cilindraje: false,
-    linea: false,
-    clase: false,
-    modelo: false,
-    nueroDeMotor: false
+    Placa: false,
+    Marca: false,
+    Cilindraje: false,
+    Linea: false,
+    Clase: false,
+    Modelo: false,
+    Numero: false
 }
 const validarFormulario = (e) => {
     switch (e.target.name) {
         case "txtPlaca":
             validarCampo(expresiones.placa, e.target, 'Placa');
-            break;
+        break;
         case "txtMarca":
             validarCampo(expresiones.marca, e.target, 'Marca');
-            break;
+        break;
         case "txtCilindraje":
             validarCampo(expresiones.cilindraje, e.target, 'Cilindraje');
-            break;
+        break;
         case "txtLinea":
             validarCampo(expresiones.linea, e.target, 'Linea');
-            break;
+        break;
         case "txtClase":
             validarCampo(expresiones.clase, e.target, 'Clase');
-            break;
+        break;
         case "txtModelo":
             validarCampo(expresiones.modelo, e.target, 'Modelo');
-            break;
+        break;
         case "txtNumeroDeMotor":
             validarCampo(expresiones.nueroDeMotor, e.target, 'Numero');
-            break;
+        break;
     }
 
 }
-const validarCampo = (expresiones, input, campo) => {
-    if (expresiones.test(input.value)) {
+const validarCampo = (expresion, input, campo) => {
+    if (expresion.test(input.value)) {
         document.getElementById(`grupo${campo}`).classList.remove('form-groun-incorrecto');
         document.getElementById(`grupo${campo}`).classList.add('form-groun-correcto');
         document.querySelector(`#grupo${campo} i`).classList.add('fa-check-circle');
         document.querySelector(`#grupo${campo} i`).classList.remove('fa-times-circle');
         document.querySelector(`#grupo${campo} .error`).classList.remove('error-activo');
         campos[campo] = true;
-    } else {
+    }else{
         document.getElementById(`grupo${campo}`).classList.add('form-groun-incorrecto');
         document.getElementById(`grupo${campo}`).classList.remove('form-groun-correcto');
         document.querySelector(`#grupo${campo} i`).classList.add('fa-times-circle');
@@ -68,6 +68,17 @@ inputs.forEach((input) => {
     input.addEventListener('blur', validarFormulario);
 
 })
+formulario.addEventListener('submit', (e) => {
+    e.preventDefault();
+    if (campos.Placa  && campos.Marca && campos.Cilindraje && campos.Linea && campos.Clase && campos.Modelo  && campos.Numero){
+        formulario.submit();
+
+
+    }else{
+        alert('usuario');
+    }
+})
+
 function modificar(obj) {
     /* llamamos los campos del formulario modificar */
     mPlaca = document.getElementById('txtMPlaca');
@@ -88,6 +99,11 @@ function modificar(obj) {
     mModelo.value = obj.children[5].innerHTML;
     mMotor.value = obj.children[6].innerHTML;
 }
+
+
+
+
+
 function eliminar(obj) {
     Swal.fire({
         title: 'Are you sure?',
@@ -101,11 +117,30 @@ function eliminar(obj) {
     }).then((result) => {
 
         if (result.isConfirmed) {
-            Swal.fire(
-                window.location = "index.php?ruta=tableVehiculos&eliminar=" + obj.children[0].innerHTML
-            )
+            Swal.fire({
+                title: 'Are you sure?',
+                text: "usuario eliminado!",
+                icon: 'success',
+                showCancelButton: false,
+                confirmButtonColor: '#3085d6',
+                confirmButtonText: 'Ok!'
+
+            }).then((result) => {
+
+                if (result.isConfirmed) {
+
+                    window.location = "index.php?ruta=tableVehiculos&eliminar=" + obj.children[0].innerHTML
+
+                } else {
+                    window.location = "index.php?ruta=tableVehiculos&eliminar=" + obj.children[0].innerHTML
+
+                }
+
+            })
+
+
         }
-        
+
     })
 
 

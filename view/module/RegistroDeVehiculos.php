@@ -17,7 +17,7 @@
 
 <body>
   <!-- menu de navegacion -->
-  <section class="menu menu--circle">
+  <section class="menu menu--circle ">
     <input type="checkbox" id="menu__active" />
     <label for="menu__active" class="menu__active">
       <div class="menu__toggle">
@@ -195,8 +195,8 @@
               <label for="pwd" class="subtitulos">Linea </label>
               <div class="negacion">
                 <input type="text" class="form-control" name="txtLinea" id="txtLinea">
+                
                 <i class=" iconoDeError  fas fa-times-circle"></i>
-
               </div>
               <p class="error">la linea de vehiculo solo puede llevar numeros, letras y guiones</p>
 
@@ -204,7 +204,7 @@
             </div>
           </div>
           <div class="botones col-12 col-sm-12 col-md-12 ">
-            <button type="submit" class="btn btn-outline-warning" id="boton4" onclick="validar(event);">Registras</button>
+            <button type="submit" class="btn btn-outline-warning" id="boton4">Registras</button>
 
           </div>
 
