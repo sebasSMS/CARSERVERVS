@@ -8,7 +8,6 @@
         private $apellido;
         private $celular;
         private $correo;
-        private $placa;
         private $estado;
     
         public function __construct($objDtoCliente){
@@ -17,12 +16,11 @@
             $this-> apellido =  $objDtoCliente-> getApellido() ;
             $this-> celular =  $objDtoCliente->  getCelular () ;
             $this-> correo  =  $objDtoCliente-> getCorreo() ;
-            $this-> placa =  $objDtoCliente-> getPlaca() ;
             
         }
         public function mldInsertarCliente(){
             /* creamos la sentecia */
-            $sql="CALL `splRegistroClientes`(?,?,?,?,?,?);";
+            $sql="CALL `splRegistroClientes`(?,?,?,?,?);";
             $this -> estado = false;
             /* creamos el try catch  */
             try {
@@ -34,14 +32,13 @@
                 $stmt -> bindParam(3, $this->apellido, PDO::PARAM_STR );
                 $stmt -> bindParam(4, $this->celular, PDO::PARAM_STR );
                 $stmt -> bindParam(5, $this->correo, PDO::PARAM_STR );
-                $stmt -> bindParam(6, $this->placa, PDO::PARAM_STR );
                 $stmt -> execute();
                 $this -> estado = true;
                 
 
 
             } catch (PDOException $ex) {
-                echo "Hay un error en el dao de cliente " . $ex -> getMessage();
+                echo "Hay un error en el dao al isertar  el cliente " . $ex -> getMessage();
             }
             return $this -> estado;
 
@@ -58,13 +55,13 @@
                 $resultset = $stmt;
      
             } catch (PDOException $ex) {
-                echo "Hay un error en el dao de cliente " . $ex -> getMessage();
+                echo "Hay un error en el dao al al listar cliente " . $ex -> getMessage();
             }
             return $resultset;  
         
         }
         public function mdlModificarClientes(){
-            $sql="CALL `splModificarClientes`(?,?,?,?,?,?);";
+            $sql="CALL `splModificarClientes`(?,?,?,?,?);";
             $this -> estado = false;
             /* creamos el try catch  */
             try {
@@ -76,14 +73,13 @@
                 $stmt -> bindParam(3, $this->apellido, PDO::PARAM_STR );
                 $stmt -> bindParam(4, $this->celular, PDO::PARAM_STR );
                 $stmt -> bindParam(5, $this->correo, PDO::PARAM_STR );
-                $stmt -> bindParam(6, $this->placa,  PDO::PARAM_STR );
                 $stmt -> execute();
                 $this -> estado = true;
                 
 
 
             } catch (PDOException $ex) {
-                echo "Hay un error en el dao de cliente " . $ex -> getMessage();
+                echo "Hay un error en el dao al modificar Cliente " . $ex -> getMessage();
             }
             return $this -> estado;
 

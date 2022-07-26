@@ -29,7 +29,7 @@
   <section class="menu menu--circle">
     <input type="checkbox" id="menu__active" />
     <label for="menu__active" class="menu__active">
-      <div class="menu__toggle">
+      <div class="menu__toggle ">
         <div class="icon">
           <div class="hamburger"></div>
         </div>
@@ -40,7 +40,7 @@
       <div class="menu__listings">
         <ul class="circle">
           <li>
-            <div class="placeholder">
+            <div class="placeholder" >
               <div class="upside">
                 <a href="" class="button"><i class="fa fa-address-card"></i></a>
               </div>
@@ -75,7 +75,7 @@
             </div>
           </li>
           <li>
-            <div class="placeholder">
+            <div class="placeholder ">
               <div class="upside">
                 <a href="index.php?ruta=tableUsuario" class="button"><i class="fa fa-table"></i></a>
                 <a href="#" class="miniBoton"><i class="fa fa-vcard-o"></i></a>
@@ -83,7 +83,7 @@
             </div>
           </li>
           <li>
-            <div class="placeholder">
+            <div class="placeholder ">
               <div class="upside">
                 <a href="index.php?ruta=tableVehiculos" class="button"><i class="fa fa-table"></i></a>
                 <a href="" class="miniBoton" id=""><i class="fa fa-car"></i></a>
@@ -91,7 +91,7 @@
             </div>
           </li>
           <li>
-            <div class="placeholder">
+            <div class="placeholder ">
               <div class="upside">
                 <a href="index.php?ruta=tableCliente" class="button"><i class="fa fa-table"></i> </a>
                 <a href="#" class="miniBoton"><i class="fa fa-vcard"></i> </a>
@@ -99,7 +99,7 @@
             </div>
           </li>
           <li>
-            <div class="placeholder">
+            <div class="placeholder ">
               <div class="upside">
                 <a href="index.php?ruta=menuPrincipal" class="button"><i class="fa fa-user"></i></a>
               </div>
@@ -142,7 +142,7 @@
       <form action="" method="post" class="" name="formulario" id="formulario">
         <div class="card-body mx-auto">
           <div class="row">
-            <div class="form-groun col-12 col-sm-6 col-md-6" id="grupoCedula">
+            <div class="form-groun col-12 col-sm-6 col-md-6"id="grupoCedula">
               <label for="pwd" class="subtitulos">Cedula </label>
               <div class="negacion">
                 <input type="number" class="form-control" name="txtCedula" id="txtCedula">
@@ -152,7 +152,7 @@
 
             </div>
 
-            <div class="form-groun col-12 col-sm-6 col-md-6" id="grupoCorreo">
+            <div class="form-groun col-12 col-sm-6 col-md-6"id="grupoCorreo">
               <label for="pwd" class="subtitulos">Correo </label>
               <div class="negacion">
                 <input type="email" class="form-control" name="txtCorreo" id="txtCorreo">
@@ -164,7 +164,7 @@
             </div>
           </div>
           <div class="row">
-            <div class="form-groun col-12 col-sm-6 col-md-6 " id="grupoNombre">
+            <div class="form-groun col-12 col-sm-6 col-md-6" id="grupoNombre">
               <label for="pwd" class="subtitulos">Nombre </label>
               <div class="negacion">
                 <input type="text" class="form-control" name="txtNombre" id="txtNombre">
@@ -174,7 +174,7 @@
               <p class="error">El usuario tiene que ser de 4 a 16 dígitos y no puede contener numeros  ni caracteres especiales.</p>
 
             </div>
-            <div class="form-groun col-12 col-sm-6 col-md-6" id="grupoCelular">
+            <div class="form-groun col-12 col-sm-6 col-md-6"id="grupoCelular">
               <label for="pwd" class="subtitulos">Celular </label>
               <div class="negacion">
                 <input type="number" class="form-control" name="txtCelular" id="txtCelular">
@@ -186,7 +186,7 @@
             </div>
           </div>
           <div class="row">
-            <div class="form-groun col-12 col-sm-6 col-md-6 " id="grupoApellido">
+            <div class="form-groun col-12 col-sm-6 col-md-6" id="grupoApellido">
               <label for="pwd" class="subtitulos">Apellido</label>
               <div class="negacion">
                 <input type="text" class="form-control" name="txtApellido" id="txtApellido">
@@ -196,19 +196,9 @@
               <p class="error">El apellido tiene que ser de 4 a 16 dígitos y no puede contener numeros y ni caracteres especiales.</p>
 
             </div>
-            <div class="form-groun col-12 col-sm-6 col-md-6" id="grupoPlaca">
-              <label for="pwd" class="subtitulos">Placa </label>
-              <div class="negacion">
-                <input type="text" class="form-control" name="txtPlaca" id="txtPlaca">
-                <i class="  iconoDeError fas fa-times-circle"></i>
-
-              </div>
-              <p class="error">la placa solo puede llevar numeros, letras y giones</p>
-
-            </div>
           </div>
 
-          <div class="botones col-12 col-sm-12 col-md-12  ">
+          <div class="botones col-12 col-sm-6 col-md-12  ">
             <button type="submit" class="btn btn-outline-warning" id="boton4" onclick="validar(event);">Registras</button>
 
           </div>
@@ -229,8 +219,7 @@
         $_POST["txtNombre"],
         $_POST["txtApellido"],
         $_POST["txtCelular"],
-        $_POST["txtCorreo"],
-        $_POST["txtPlaca"]
+        $_POST["txtCorreo"]
 
 
       );

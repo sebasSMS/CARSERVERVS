@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="view/img/logoProyecto.png" type="image/x-icon">
     <title>Menu Principal</title>
     <link rel="stylesheet" href="view/css/estilos.css">
 
@@ -43,8 +43,8 @@
         <ul>
             <li>
                 <a href="#">
-                    <span class="iconos">
-                        <ion-icon name="car-sport-outline"></ion-icon>
+                    <span class="iconosL">
+                        <img src="view/img/logoProyecto.png " width="80%" height="80%" class="iconoProyecto" alt="">
                     </span>
                     <span class="title">Car serviser </span>
                 </a>

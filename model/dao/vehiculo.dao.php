@@ -7,6 +7,7 @@
         private $clase;
         private $modelo;
         private $numeroDeMotor;
+        private $IdClientes;
         private $estado;
 
         public function __construct($objDtoVehiculos) {
@@ -18,11 +19,11 @@
             $this -> clase = $objDtoVehiculos -> getClase();
             $this -> modelo = $objDtoVehiculos -> getModelo();
             $this -> numeroDeMotor = $objDtoVehiculos -> getNumeroDeMotor();
+            $this -> IdClientes = $objDtoVehiculos -> getIdCedula();
         }
         public function mldInsertarVehiculo(){
             /* creamos la sentencia */
-            $sql = "INSERT INTO `vehiculo`(`PLACA`, `MARCA`, `CILINDRAJE`, `LINEA`, `CLASE`, `MODELO`, `NUMERO MOTOR`) VALUES (?,?,?,?,?,?,?);";
-            $this-> estado = false;
+            $sql = "CALL splRegistroVehiculo(?,?,?,?,?,?,?,?);";
   /*------------creamos el try catch -------------*/
             try {
 /*                 creamos una variable y llamamos la conexion */
@@ -34,7 +35,9 @@
                 $stmt -> bindParam(4, $this-> linea, PDO::PARAM_STR);                
                 $stmt -> bindParam(5, $this-> clase, PDO::PARAM_STR);                
                 $stmt -> bindParam(6, $this-> modelo, PDO::PARAM_INT );                
-                $stmt -> bindParam(7, $this-> numeroDeMotor, PDO::PARAM_INT );  
+                $stmt -> bindParam(7, $this-> numeroDeMotor, PDO::PARAM_INT );
+                $stmt -> bindParam(8, $this-> IdClientes, PDO::PARAM_INT );
+
                 $stmt -> execute(); 
                 $this-> estado = true;           
 
@@ -44,6 +47,20 @@
             return $this-> estado;
             
 
+        }
+        public function mdlListarCedulaCliente(){  #Funcion utilizada para visualizar a todos los tipos de rol registrados
+            $sql = "CALL spListarCedulaDeCliente()";  //Procedimiento almacenado
+
+            try {
+                $con = new Conexion();
+                $stmt = $con -> conexion() -> prepare($sql);
+                $stmt -> execute();
+                $resulset = $stmt;
+                
+            } catch (PDOException $e) {
+                echo "Error en el metodo al listar cedulaDeClienete " . $e -> getMessage();
+            }
+            return $resulset;
         }
         public function mdlListarVehiculo(){
             $sql="CALL `splListarVehiculo`();";
@@ -61,7 +78,7 @@
         
         }
         public function mdlModificarVehiculo(){
-            $sql="CALL `splModificarVehiculo`(?,?,?,?,?,?,?);";
+            $sql="CALL `splModificarVehiculo`(?,?,?,?,?,?,?,?);";
             $this -> estado = false;
             /* creamos el try catch  */
             try {
@@ -75,6 +92,7 @@
                 $stmt -> bindParam(5, $this-> clase, PDO::PARAM_STR);                
                 $stmt -> bindParam(6, $this-> modelo, PDO::PARAM_INT );                
                 $stmt -> bindParam(7, $this-> numeroDeMotor, PDO::PARAM_INT );  
+                $stmt -> bindParam(8, $this-> IdClientes, PDO::PARAM_INT );  
                 $stmt -> execute();          
                 $this -> estado = true;
                

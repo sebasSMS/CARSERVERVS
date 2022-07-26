@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=}, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="view/css/prueba.css">
+  <link rel="stylesheet" href="view/css/login.css">
   <link rel="stylesheet" href="view/css/sweetalert2.min.css">
   <script src="view/js/sweetalert2.all.min.js"></script>
 

@@ -1,8 +1,8 @@
 <?php
     class ControllerCliente{
-        public function crtInsertarCliente($cedula,$nombre,$apellido,$celular,$correo,$placa){
+        public function crtInsertarCliente($cedula,$nombre,$apellido,$celular,$correo){
 
-            $ojbDtoCliente = new Clientes($cedula,$nombre,$apellido,$celular,$correo,$placa);
+            $ojbDtoCliente = new Clientes($cedula,$nombre,$apellido,$celular,$correo);
             $ojbDaoCliente = new ModelClientes($ojbDtoCliente);
             if ($ojbDaoCliente -> mldInsertarCliente() == true){
                 echo"
@@ -38,7 +38,7 @@
         public function ctrListarCliente(){
             $array = false; 
             try {
-                $ojbDtoCliente = new Clientes(null,null,null,null,null,null);
+                $ojbDtoCliente = new Clientes(null,null,null,null,null);
                 $ojbDaoCliente = new ModelClientes($ojbDtoCliente);
                 $array =  $ojbDaoCliente -> mdlListarClientes() -> fetchALL();
             } catch (\Throwable $e) {
@@ -53,8 +53,7 @@
                 $_POST['txtMNombre'],
                 $_POST['txtMApellido'],
                 $_POST['txtMCelular'],
-                $_POST['txtMCorreo'],
-                $_POST['txtMPlaca']
+                $_POST['txtMCorreo']
 
             );
 

@@ -6,15 +6,13 @@
         private $apellido;
         private $celular;
         private $correo;
-        private $placa;
 
-        public function __construct($cedula, $nombre, $apellido, $celular, $correo, $placa) {
+        public function __construct($cedula, $nombre, $apellido, $celular, $correo) {
             $this-> cedula = $cedula;
             $this-> nombre = $nombre;
             $this-> apellido = $apellido;
             $this-> celular = $celular;
             $this-> correo = $correo;
-            $this-> placa = $placa;
 
         }
         public function getCedula(){
@@ -32,9 +30,6 @@
         public function getCorreo(){
             return $this -> correo;
         }
-        public function getPlaca(){
-            return $this -> placa;
-        }
       /*   set */
         public function setCedula($cedula){
             $this -> cedula = $cedula;
@@ -51,11 +46,7 @@
         public function setCorreo($correo){
             $this -> correo = $correo;
         }
-        
-        public function setPlaca($placa){
-            $this->  placa = $placa;
-        }
-
+   
 
     }
 ?>

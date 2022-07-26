@@ -8,15 +8,14 @@ const expresiones = {
     password: /^.{4,12}$/, // 4 a 12 digitos.
     correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
     celular: /^\d{7,14}$/,// 7 a 14 numeros.
-    placa: /^[a-zA-Z0-9\_\-]{4,16}$/, // Letras, numeros, guion y guion_bajo
+
 }
 const campos = {
     Cedula: false,
     Nombre: false,
     Apellido: false,
     Celular: false,
-    Correo: false,
-    Placa: false
+    Correo: false
 
 }
 const validarFormulario = (e) => {
@@ -35,9 +34,6 @@ const validarFormulario = (e) => {
             break;
         case "txtCorreo":
             validarCampo(expresiones.correo, e.target, 'Correo');
-            break;
-        case "txtPlaca":
-            validarCampo(expresiones.placa, e.target, 'Placa');
             break;
     }
 
@@ -66,7 +62,7 @@ inputs.forEach((input) => {
 })
 formulario.addEventListener('submit', (e) => {
     e.preventDefault();
-    if (campos.Cedula && campos.Nombre && campos.Apellido && campos.Celular && campos.Correo && campos.Placa) {
+    if (campos.Cedula && campos.Nombre && campos.Apellido && campos.Celular && campos.Correo) {
         formulario.submit();
     } else {
         Swal.fire({
@@ -88,7 +84,6 @@ function modificar(obj) {
     mApellido = document.getElementById('txtMApellido');
     mCelular = document.getElementById('txtMCelular');
     mCorreo = document.getElementById('txtMCorreo');
-    mPlaca = document.getElementById('txtMPlaca');
 
     /* asignamos los datos a los campos de el formulario modificar */
 
@@ -97,7 +92,6 @@ function modificar(obj) {
     mApellido.value = obj.children[2].innerHTML;
     mCelular.value = obj.children[3].innerHTML;
     mCorreo.value = obj.children[4].innerHTML;
-    mPlaca.value = obj.children[5].innerHTML;
 }
 
 function eliminar(obj) {

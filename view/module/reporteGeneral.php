@@ -20,7 +20,7 @@
 
       <form action="" method="post" class="" name="formulario" id="formulario">
         <div class="card-body mx-auto">
-          <div class="form-groun col-12 col-sm-6 col-md-6" id="grupoPlaca">
+          <div class="form-groun  col-12 col-sm-6 col-md-4"id="grupoPlaca">
             <label for="pwd" class="subtitulos"> Placa </label>
             <div class="negacion">
               <input type="txt" class="form-control" name="txtplaca" id="txtplaca">
@@ -28,7 +28,7 @@
             </div>
 
           </div>
-          <div class="form-groun col-12 col-sm-6 col-md-6" id="grupoServico">
+          <div class="form-groun  col-12 col-sm-6 col-md-4"id="grupoServico">
             <label for="pwd" class="subtitulos">datos del servico </label>
             <div class="negacion">
               <input type="txt" class="form-control" name="txtServico" id="txtServico">
@@ -38,7 +38,7 @@
           </div>
           <div class="row">
             <div class="form-groun col-12 col-sm-6 col-md-4" id="grupoPunto">
-              <label for="pwd" class="subtitulos">Punto de Punto </label>
+              <label for="pwd" class="subtitulos">Punto de servico </label>
               <div class="negacion">
                 <input type="txt" class="form-control" name="txtPunto" id="txtPunto">
 

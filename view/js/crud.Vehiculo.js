@@ -8,6 +8,8 @@ function modificar(obj) {
     mClase = document.getElementById('txtMClase');
     mModelo = document.getElementById('txtMModelo');
     mMotor = document.getElementById('txtMNumeroDeMotor');
+    midCedula = document.getElementById('txtMIdCliente');
+
 
     /* asignamos los datos a los campos de el formulario modificar */
 
@@ -18,6 +20,7 @@ function modificar(obj) {
     mClase.value = obj.children[4].innerHTML;
     mModelo.value = obj.children[5].innerHTML;
     mMotor.value = obj.children[6].innerHTML;
+    midCedula.value = obj.children[7].innerHTML;
 }
 
 

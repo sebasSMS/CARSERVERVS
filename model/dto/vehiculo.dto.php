@@ -7,8 +7,9 @@
         private $clase;
         private $modelo;
         private $numeroDeMotor;
+        private $idCedula;
 
-        public function __construct($placa,$marca,$cilindraje,$linea,$clase,$modelo,$numeroDeMotor){
+        public function __construct($placa,$marca,$cilindraje,$linea,$clase,$modelo,$numeroDeMotor, $idCedula){
             $this -> placa = $placa;
             $this -> marca = $marca; 
             $this -> cilindraje = $cilindraje; 
@@ -16,6 +17,7 @@
             $this -> clase = $clase; 
             $this -> modelo = $modelo; 
             $this -> numeroDeMotor = $numeroDeMotor; 
+            $this-> idCedula = $idCedula;
 
             
         }
@@ -42,6 +44,9 @@
         public function setNumeroDeMotor($numeroDeMotor){
             $this->numeroDeMotor = $numeroDeMotor;
         }
+        public function setIdCedula($idCedula){
+            $this->idCedula = $idCedula;
+        }
 
 
    /*      metodo get */
@@ -65,6 +70,9 @@
         }
         public function getNumeroDeMotor(){
             return $this->numeroDeMotor;
+        }
+        public function getIdCedula(){
+            return $this->idCedula;
         }
 
 

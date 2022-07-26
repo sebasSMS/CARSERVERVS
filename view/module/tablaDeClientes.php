@@ -4,6 +4,7 @@
 <head>
   <title>Tabla de Clientes</title>
   <link rel="shortcut icon" href="view/img/logo.png" type="image/x-icon">
+  <link rel="shortcut icon" href="view/img/logoProyecto.png" type="image/x-icon">
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -147,7 +148,6 @@
           <th>Apellido</th>
           <th>Celular</th>
           <th>Email</th>
-          <th>placa</th>
           <th>Funciones</th>
 
         </tr>
@@ -165,7 +165,6 @@
               <td>" . $dato["APELLIDO"] . "</td>
               <td>" . $dato["CELULAR"] . "</td>
               <td>" . $dato["CORREO"] . "</td>
-              <td>" . $dato["PLACA"] . "</td>
               <td>
                 <button type='button' class='btn btn-outline-primary' id='boton1' data-toggle='modal' data-target='#ModificarModal' onclick='modificar(this.parentElement.parentElement);' ><img src='view/img/editar.png' alt='' width='90%' height='50%'></button>
                 <button type='button' class='btn btn-outline-danger' id='boton2' onclick='eliminar(this.parentElement.parentElement);' ><img src='view/img/eliminar.png' alt='' width='90%' height='50%'></button>
@@ -242,17 +241,8 @@
                 </div>
 
               </div>
-              <div class="form-groun col-12 col-sm-6 col-md-6">
-                <label for="pwd" class="subtitulos">Placa </label>
-                <div class="">
-                  <input type="text" class="form-control" name="txtMPlaca" id="txtMPlaca">
-
-
-                </div>
-
-              </div>
-
             </div>
+            
 
           </div>
           <div class="modal-footer">

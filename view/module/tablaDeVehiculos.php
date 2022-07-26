@@ -22,7 +22,7 @@
 
 <body>
 
-  <!-- Optional JavaScript -->
+  <!-- Menu circular -->
   <section class="menu menu--circle">
     <input type="checkbox" id="menu__active" />
     <label for="menu__active" class="menu__active">
@@ -141,6 +141,7 @@
           <th>Clase</th>
           <th>Modelo </th>
           <th>Numero del Motor</th>
+          <th>Clientes</th>
           <th>Funciones</th>
 
 
@@ -161,6 +162,8 @@
             <td>" . $dato["CLASE"] . "</td>
             <td>" . $dato["MODELO"] . "</td>
             <td>" . $dato["NUMERO MOTOR"] . "</td>
+            <td>" . $dato["idCedula"] . "</td>
+
             <td>
             <button type='button' class='btn btn-outline-primary' id='boton1' data-toggle='modal' data-target='#ModificarModal' onclick='modificar(this.parentElement.parentElement);' ><img src='view/img/editar.png' alt='' width='90%' height='50%'></button>
             <button type='button' class='btn btn-outline-danger' id='boton2' onclick='eliminar(this.parentElement.parentElement);' ><img src='view/img/eliminar.png' alt='' width='90%' height='50%'></button>
@@ -180,6 +183,7 @@
       }
       ?>
     </table>
+<!--     MODAL PARA EDITAR VEHICULO -->
     <div class="modal  fade" id="ModificarModal" tabindex="-1" aria-labelledby="ModificarModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content" id="modalC">
@@ -259,6 +263,25 @@
                   <div class="negacion">
                     <input type="text" class="form-control" name="txtMLinea" id="txtMLinea">
 
+
+                  </div>
+
+                </div>
+                <!-- campos para modificar clientes -->
+                <div class="form-groun col-12 col-sm-6 col-md-6" id="grupoLinea">
+                  <label for="pwd" class="subtitulos">Clientes </label>
+                  <div class="negacion">
+                    <select name="txtMIdCliente" id="txtMIdCliente" class="form-control" >
+                      <option value=""> Clientes:</option>
+                      <?php
+                      $objCtrVehiculo = new ControllerVehiculo();
+                      $listaDeVehiculo = $objCtrVehiculo->ctrListarCedulaDeClientes();
+                      foreach ($listaDeVehiculo as $dato) {
+                        echo '<option value="' . $dato["CEDULA"] . '"> ' . $dato["CEDULA"] . ': ' . $dato["NOMBRE"] . ' </option>';
+                      }
+                      ?>
+
+                    </select>
 
                   </div>
 

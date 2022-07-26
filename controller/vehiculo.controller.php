@@ -1,9 +1,9 @@
 <?php
     class ControllerVehiculo{
 /*        ---------- funcion para insertar vehiculo------- */
-        public function crtInsertarVehiculo($placa,$marca,$cilindraje,$linea,$clase,$modelo,$numeroDeMotor){
+        public function crtInsertarVehiculo($placa,$marca,$cilindraje,$linea,$clase,$modelo,$numeroDeMotor,$idCedula){
 
-            $objDtoVehiculos = new Vehiculos($placa,$marca,$cilindraje,$linea,$clase,$modelo,$numeroDeMotor);
+            $objDtoVehiculos = new Vehiculos($placa,$marca,$cilindraje,$linea,$clase,$modelo,$numeroDeMotor,$idCedula);
             $objDaoVehiculo = new ModelVehiculo($objDtoVehiculos);
             if ($objDaoVehiculo -> mldInsertarVehiculo()){
 
@@ -34,10 +34,23 @@
 
 
         }
+        public function ctrListarCedulaDeClientes(){ 
+            $lista = false;
+            try {
+                $objDtoVehiculo = new Vehiculos(null,null,null,null,null,null,null,null);
+                $objDaoVehiculo = new ModelVehiculo( $objDtoVehiculo );
+                $lista = $objDaoVehiculo -> mdlListarCedulaCliente() -> fetchAll();
+
+            } catch (PDOException $e) {
+                echo "error al mostrar al cedula del cliente" . $e -> getMessage();
+            }
+            return $lista;
+        }
+
         public function ctrListarVehiculo(){
             $array = false; 
             try {
-                $objDtoVehiculo = new Vehiculos(null,null,null,null,null,null,null);
+                $objDtoVehiculo = new Vehiculos(null,null,null,null,null,null,null,null);
                 $objDaoVehiculo = new ModelVehiculo($objDtoVehiculo);
                 $array =  $objDaoVehiculo -> mdlListarVehiculo() -> fetchALL();
             } catch (\Throwable $e) {
@@ -55,7 +68,9 @@
                 $_POST['txtMLinea'],
                 $_POST['txtMClase'],
                 $_POST['txtMModelo'],
-                $_POST['txtMNumeroDeMotor']
+                $_POST['txtMNumeroDeMotor'],
+                $_POST['txtMIdCliente']
+                
             );
     
 
@@ -101,6 +116,8 @@
                 null,
                 null,
                 null,
+                null,
+                null, 
                 null
 
 
