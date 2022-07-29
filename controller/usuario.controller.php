@@ -125,5 +125,62 @@
 
       
         }
+        /*funcion para recordar contraseña */
+        public function crtValidarInformacion($cedula,$correo){
+
+            try {
+                $objDtoUsuario = new Usuario($cedula,NULL,NULL,NULL,$correo,NULL);
+                $objDaoUsuario = new ModelUsuario($objDtoUsuario);
+                $resultado = $objDaoUsuario -> mdlValidarInformacion() -> fetch();
+                if(gettype($resultado) != "boolean"){
+                    $mailSend = new clsMail();
+                    $objDaoUsuario = new ModelUsuario($objDtoUsuario);
+                    $lista1= $objDaoUsuario->mdlMostrarDatosDeUsuario()->fetchAll();
+                    $lista2 = $objDaoUsuario->mdlMostrarDatosPersonalesDeUsuario()->fetchAll();
+
+                    foreach($lista1 as $dato){
+                        $datoP[0] = ''.$dato['CLAVE'].'';
+                    }
+
+                    foreach($lista2 as $dato){
+                        $datoP[1] = ''.$dato['NOMBRE'].'';
+                        $datoP[2] = ''.$dato['APELLIDO'].'';
+                    }
+                        
+                    $titulo ="INV_PRIV";
+                    $asunto ="Recordar Contraseña";
+                    $bodyHTML = '
+                        <h1><em>Car Servevicer</em></h1>
+                        <hr>
+                        <h2> Hola, </h2>
+                        <h2> <b> Sñr@, '.$datoP[1].' '.$datoP[2].' </b>, </h2>
+                        <h2> Haz olvidado la contraseña,<i> ¡No te preocupes!</i>, </h2>
+                        <h2> A continuación te la recordamos. </h2>
+                        <br>
+                        <h2> CONTRASEÑA: <b>( '.$datoP[0].' )</b> </h2>
+                        <br>
+                        <hr>
+                        <mark>
+                            <h2> Gracias, </h2>
+                            <h2> El equipo de INV_PRIV </h2>
+                        </mark>
+                    ';
+                    $enviado = $mailSend->metEnviar($titulo,$correo,$asunto,$bodyHTML);
+    
+                    if($enviado){
+                        echo "<script>alert('Enviado');</script>";
+                    }else{
+                        echo "<script>alert('No se envió correo');</script>";
+                    }       
+                }else{
+                    echo"<script>alert('el Usuario no existe'); </script>";
+                }
+            } catch ( PDOException $e) {
+                echo "Error en el controlador crtValidarInformacion  " .$e -> getMessage();
+                
+            }
+
+
+        }
     }
 ?>

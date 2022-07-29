@@ -16,7 +16,6 @@
           <th>Numero del Motor</th>
           <th>Funciones</th>
 
-
         </tr>
       </thead>
       <a name="" id="salir" class="btn btn-outline-success" href="index.php?ruta=reporteVehiculo" role="button"><img src="view/img/excel.png" width="60%" height="30%" alt=""></a>

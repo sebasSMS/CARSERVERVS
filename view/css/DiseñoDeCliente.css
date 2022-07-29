@@ -119,6 +119,13 @@ div.form-groun{
     color: #1ed12d;
     opacity: 1;
 }
+.form-groun-correcto .form-control{
+    border: 3px solid #0fef29 ;
+}
+.form-groun-correcto .subtitulos{
+    font-size: 17px;
+
+}
 .form-groun-incorrecto .subtitulos{
     color: #bb2929;
 }

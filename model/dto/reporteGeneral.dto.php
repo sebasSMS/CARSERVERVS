@@ -4,16 +4,16 @@
         private $puntoDeServico;
         private $kilometraje;
         private $tecnico;
-        private $descripcino;
+        private $descripcion;
         private $placa;
 
-        public function __construct($datosDeServico,$puntoDeServico,$kilometraje,$tecnico,$descripcino,$placa){
+        public function __construct($datosDeServico,$puntoDeServico,$kilometraje,$tecnico,$descripcion,$placa){
         
             $this-> datosDeServico = $datosDeServico;   
             $this-> puntoDeServico = $puntoDeServico; 
             $this-> kilometraje = $kilometraje; 
             $this-> tecnico = $tecnico;
-            $this-> descripcino = $descripcino; 
+            $this-> descripcion = $descripcion; 
             $this-> placa = $placa; 
         }
         /* get */   
@@ -31,7 +31,7 @@
 
         }
         public function getDescripcion(){
-            return $this-> descripcino;
+            return $this-> descripcion;
 
         }
         public function getPlaca(){
@@ -50,8 +50,8 @@
         public function setTecnico($tecnico){
             $this->tecnico = $tecnico;
         }
-        public function setDescripcion($descripcino){
-            $this->descripcino = $descripcino;
+        public function setDescripcion($descripcion){
+            $this->descripcion = $descripcion;
         }
         public function setPlaca($placa){
             $this->placa = $placa;

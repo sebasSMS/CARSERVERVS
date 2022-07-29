@@ -1,4 +1,7 @@
 <?php
+
+use LDAP\Result;
+
     class ModelUsuario{
         private $cedula;
         private $nombre;
@@ -88,9 +91,6 @@
                 $stmt -> bindParam(6, $this->rol,  PDO::PARAM_STR );
                 $stmt -> execute();
                 $this -> estado = true;
-               
-
-
             } catch (PDOException $ex) {
                 echo "Hay un error en el dao de usuario " . $ex -> getMessage();
             }
@@ -116,7 +116,64 @@
             }
             return $this -> estado;
 
+
         } 
+        /* funcion para validarLaInformacion */
+        public function mdlValidarInformacion(){
+            $resultset = false;
+            /* procedimineto almacenado */
+            $sql = "CALL spValidarUsuario(?,?)";
+
+             try {
+                 $con = new Conexion();
+                 $stmt = $con -> conexion() -> prepare($sql);
+                 $stmt -> bindParam(1, $this->cedula, PDO::PARAM_INT );
+                 $stmt -> bindParam(2, $this->correo, PDO::PARAM_STR );
+                 $stmt -> execute();
+                 $resultset = $stmt;
+
+             } catch (PDOException $ex ) {
+                echo " Hay un error en el modelo  mdlValidarInformacion ". $ex -> getMessage();
+
+             }
+             return $resultset;
+        }
+        /* FUNCION PARA MOSTRA DATOS DE UN   USUARIO EN ESPECIFICO  */
+
+        public function mdlMostrarDatosPersonalesDeUsuario(){
+            /* procedimiento al macenado  */
+            $sql = "CALL spMostrarDatosUsuario(?)";
+
+             try {
+                 $con = new Conexion();
+                 $stmt = $con -> conexion() -> prepare($sql);
+                 $stmt -> bindParam(1, $this->cedula, PDO::PARAM_INT );
+                 $stmt -> execute();
+                 $resultset = $stmt;
+
+             } catch (PDOException $ex ) {
+                echo " Hay un error en el modelo  mdlMostrarDatosDeUsuario ". $ex -> getMessage();
+             }
+             return $resultset;
+
+        }
+        public function mdlMostrarDatosDeUsuario(){
+            /* procedimiento al macenado  */
+            $sql = "CALL spMostrarUsuario(?)";
+             try {
+                 $con = new Conexion();
+                 $stmt = $con -> conexion() -> prepare($sql);
+                 $stmt -> bindParam(1, $this->cedula, PDO::PARAM_INT );
+                 $stmt -> execute();
+                 $resultset = $stmt;
+
+             } catch (PDOException $ex ) {
+                echo " Hay un error en el modelo  mdlMostrarDatosDeUsuario ". $ex -> getMessage();
+             }
+             return $resultset;
+
+        }
+
 
     }
 ?>

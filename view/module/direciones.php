@@ -1,6 +1,4 @@
-<?php
-    
-    
+<?php    
     if (isset($_GET['ruta'])){
         switch ($_GET['ruta']) {
             /* ------------menu principal---------------- */

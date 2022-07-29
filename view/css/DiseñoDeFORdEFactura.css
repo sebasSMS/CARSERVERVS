@@ -108,6 +108,10 @@ body{
     color: #1ed12d;
     opacity: 1;
 }
+
+.form-groun-correcto .form-control{
+    border: 3px solid #0fef29 ;
+}
 .form-groun-incorrecto .subtitulos{
     color: #bb2929;
     
@@ -116,6 +120,8 @@ body{
     color: #bb2929;
     opacity: 1;
 }
+
+
 .form-groun-incorrecto .form-control{
     border: 3px solid #bb2929 ;
 }

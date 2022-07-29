@@ -6,6 +6,7 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="shortcut icon" href="view/img/logoProyecto.png" type="image/x-icon">
   <!-- --------------dataTable------------- -->
   <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap4.min.css">
   <!-- Bootstrap CSS -->
@@ -17,18 +18,11 @@
   <!-------alertas de javascript sweetalert2 -->
   <link rel="stylesheet" href="view/css/sweetalert2.min.css">
   <script src="view/js/sweetalert2.all.min.js"></script>
-
-
-
 </head>
 
 <body>
 
-  <!-- Optional JavaScript -->
-
-
-
-  <!-- Optional JavaScript -->
+  <!-- MENU CIRCULAR  -->
   <section class="menu menu--circle">
     <input type="checkbox" id="menu__active" />
     <label for="menu__active" class="menu__active">
@@ -201,6 +195,7 @@
             <div class="container ">
               <form action="" method="post" class="" name="formulario" id="formulario">
                 <div class="card-body mx-auto">
+                  <!-- campo para modifcar cedula -->
                   <div class="row">
                     <div class="form-groun col-12 col-sm-6 col-md-6" id="grupoCedula">
                       <label for="pwd" class="subtitulos">Cedula </label>
@@ -210,6 +205,7 @@
 
                     </div>
 
+                    <!-- campo para modificar correo -->
                     <div class="form-groun col-12 col-sm-6 col-md-6" id="grupoCorreo">
                       <label for="pwd" class="subtitulos">Correo </label>
                       <div class="negacion">
@@ -221,6 +217,7 @@
                     </div>
                   </div>
                   <div class="row">
+                    <!-- campo para modificar nombre -->
                     <div class="form-groun col-12 col-sm-6 col-md-6 " id="grupoNombre">
                       <label for="pwd" class="subtitulos">Nombre </label>
                       <div class="negacion">
@@ -229,6 +226,7 @@
                       </div>
 
                     </div>
+                    <!-- campo para modificar celular -->
                     <div class="form-groun col-12 col-sm-6 col-md-6" id="grupoCelular">
                       <label for="pwd" class="subtitulos">Celular </label>
                       <div class="negacion">
@@ -238,6 +236,7 @@
                     </div>
                   </div>
                   <div class="row">
+                    <!-- campo para modificar apellido -->
                     <div class="form-groun col-12 col-sm-6 col-md-6 " id="grupoApellido">
                       <label for="pwd" class="subtitulos">Apellido</label>
                       <div class="negacion">
@@ -245,6 +244,7 @@
                       </div>
                     </div>
                     <div class="form-groun col-12 col-sm-6 col-md-6 " id="grupoApellido">
+                      <!-- campo para modificar rol -->
                       <label for="" class="txt">Rol:</label>
                       <select name="txtMRol" id="txtMRol" class="form-control">
                         <option value=""> Seleccione Rol </option>
@@ -268,6 +268,7 @@
 
                 </div>
 
+                        <!-- boton para el modal  -->
                 <div class="modal-footer">
                   <button type="submit" class="btn btn-outline-primary" id="boton1">Actualizar</button>
                   <button type="button" class="btn btn-outline-danger" id="boton2" data-dismiss="modal">Close</button>
@@ -275,37 +276,14 @@
 
                 <?php
                 /* modificar usuario */
-
                 if (isset($_POST['txtMCedula'])) {
                   $objCtrUsuario = new ControllerUsuario();
                   $objCtrUsuario->ctrModificarUsuario();
                 }
                 ?>
-
               </form>
-              <?php
-              if (isset($_POST["txtCedula"])) {
-                $objCtrUsuario = new ControllerUsuario();
-                $objCtrUsuario->crtInsertarUsuario(
-                  $_POST["txtCedula"],
-                  $_POST["txtNombre"],
-                  $_POST["txtApellido"],
-                  $_POST["txtCelular"],
-                  $_POST["txtCorreo"],
-                  $_POST["txtRol"]
-
-
-
-                );
-              }
-              ?>
-
             </div>
-
-
-
           </div>
-
         </div>
       </div>
     </div>

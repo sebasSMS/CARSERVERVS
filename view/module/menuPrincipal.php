@@ -8,7 +8,6 @@
     <link rel="shortcut icon" href="view/img/logoProyecto.png" type="image/x-icon">
     <title>Menu Principal</title>
     <link rel="stylesheet" href="view/css/estilos.css">
-
 </head>
 
 <body>
@@ -34,7 +33,6 @@
             <img src="view/img/fondo.jpg">
 
         </div>
-
 
 
     </section>
@@ -112,7 +110,6 @@
     <script src="view/js/menu.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
     <!-- jQuery 3 -->
     <script src="view/bower_components/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap 3.3.7 -->

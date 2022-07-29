@@ -239,7 +239,13 @@ body{
     overflow:hidden;
     cursor: pointer;
 }
+/* resposive */
+@media screen and (max-width:1140px) {
+    .search img{
+        height: 820px;
+    }
 
+}
 
 /* car */
 

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="view/img/logoProyecto.png" type="image/x-icon">
   <title>Creacion de cliente </title>
   <!--------bootstrap css-------->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -40,7 +40,7 @@
       <div class="menu__listings">
         <ul class="circle">
           <li>
-            <div class="placeholder" >
+            <div class="placeholder">
               <div class="upside">
                 <a href="" class="button"><i class="fa fa-address-card"></i></a>
               </div>
@@ -142,7 +142,7 @@
       <form action="" method="post" class="" name="formulario" id="formulario">
         <div class="card-body mx-auto">
           <div class="row">
-            <div class="form-groun col-12 col-sm-6 col-md-6"id="grupoCedula">
+            <div class="form-groun col-12 col-sm-6 col-md-6" id="grupoCedula">
               <label for="pwd" class="subtitulos">Cedula </label>
               <div class="negacion">
                 <input type="number" class="form-control" name="txtCedula" id="txtCedula">
@@ -152,7 +152,7 @@
 
             </div>
 
-            <div class="form-groun col-12 col-sm-6 col-md-6"id="grupoCorreo">
+            <div class="form-groun col-12 col-sm-6 col-md-6" id="grupoCorreo">
               <label for="pwd" class="subtitulos">Correo </label>
               <div class="negacion">
                 <input type="email" class="form-control" name="txtCorreo" id="txtCorreo">
@@ -171,10 +171,10 @@
                 <i class="  iconoDeError fas fa-times-circle"></i>
 
               </div>
-              <p class="error">El usuario tiene que ser de 4 a 16 dígitos y no puede contener numeros  ni caracteres especiales.</p>
+              <p class="error">El usuario tiene que ser de 4 a 16 dígitos y no puede contener numeros ni caracteres especiales.</p>
 
             </div>
-            <div class="form-groun col-12 col-sm-6 col-md-6"id="grupoCelular">
+            <div class="form-groun col-12 col-sm-6 col-md-6" id="grupoCelular">
               <label for="pwd" class="subtitulos">Celular </label>
               <div class="negacion">
                 <input type="number" class="form-control" name="txtCelular" id="txtCelular">
@@ -196,6 +196,7 @@
               <p class="error">El apellido tiene que ser de 4 a 16 dígitos y no puede contener numeros y ni caracteres especiales.</p>
 
             </div>
+
           </div>
 
           <div class="botones col-12 col-sm-6 col-md-12  ">
