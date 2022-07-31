@@ -146,23 +146,29 @@
                         $datoP[1] = ''.$dato['NOMBRE'].'';
                         $datoP[2] = ''.$dato['APELLIDO'].'';
                     }
-                        
-                    $titulo ="INV_PRIV";
+                    
+                    $titulo ="Car Servicer V.S";
                     $asunto ="Recordar Contraseña";
                     $bodyHTML = '
-                        <h1><em>Car Servevicer</em></h1>
+                        <style>
+                            .titulo{
+                                color: rgb(28, 159, 235);
+                            }
+                        </style>
+                        <h1 class="titulo"><em>Car Servicer V.S </em> </h1>
+                        <br>
                         <hr>
                         <h2> Hola, </h2>
                         <h2> <b> Sñr@, '.$datoP[1].' '.$datoP[2].' </b>, </h2>
                         <h2> Haz olvidado la contraseña,<i> ¡No te preocupes!</i>, </h2>
                         <h2> A continuación te la recordamos. </h2>
                         <br>
-                        <h2> CONTRASEÑA: <b>( '.$datoP[0].' )</b> </h2>
+                        <h2 > CONTRASEÑA: <b>( '.$datoP[0].' )</b> </h2>
                         <br>
                         <hr>
                         <mark>
                             <h2> Gracias, </h2>
-                            <h2> El equipo de INV_PRIV </h2>
+                            <h2> El equipo de Car ServicerV.S </h2>
                         </mark>
                     ';
                     $enviado = $mailSend->metEnviar($titulo,$correo,$asunto,$bodyHTML);
@@ -183,4 +189,3 @@
 
         }
     }
-?>
