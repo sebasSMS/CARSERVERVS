@@ -135,6 +135,7 @@
 
     <table class="table table-hover" id="Usuarios">
       <thead>
+        
         <tr>
           <th>Cedula</th>
           <th>Nombre</th>
@@ -270,8 +271,8 @@
 
                         <!-- boton para el modal  -->
                 <div class="modal-footer">
-                  <button type="submit" class="btn btn-outline-primary" id="boton1">Actualizar</button>
-                  <button type="button" class="btn btn-outline-danger" id="boton2" data-dismiss="modal">Close</button>
+                  <button type="submit" class="btn btn-primary" id="boton1">Actualizar</button>
+                  <button type="button" class="btn btn-danger" id="boton2" data-dismiss="modal">Close</button>
                 </div>
 
                 <?php

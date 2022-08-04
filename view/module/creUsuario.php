@@ -208,7 +208,7 @@
 
 
           <div class="botones col-12 col-sm-12 col-md-12  ">
-            <button type="submit" class="btn btn-outline-warning" id="boton4">Registras</button>
+            <button type="submit" class="btn btn-warning" id="boton4">Registras</button>
 
           </div>
 

@@ -90,7 +90,13 @@ div.form-groun{
 }
 .btn{
     width:15%;
-    color: #02142b;;
+    color: #04254f;;
+}
+#boton1{
+    background-color: #0033ff;
+}
+#boton2{
+    color: rgb(183, 216, 245);
 }
 #boton1:hover {
    
@@ -100,7 +106,10 @@ div.form-groun{
 } 
 #boton2:hover {
    
-    box-shadow: 0 12px 16px 0 rgba(255, 6, 6, 0.342), 0 17px 50px 0 rgba(255, 24, 24, 0.19);
-    background: red;
+    box-shadow: 0 12px 16px 0 rgba(241, 49, 49, 0.342), 0 17px 50px 0 rgba(255, 24, 24, 0.19);
+    background: rgb(253, 48, 48);
+    color: rgb(255, 255, 255);
+    
+
 }   
 

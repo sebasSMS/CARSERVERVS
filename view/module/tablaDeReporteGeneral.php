@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Tabla de Clientes</title>
+  <title>Tabla de Reporte General</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -12,15 +12,13 @@
   <!-- --------------dataTable css------------- -->
   <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap4.min.css">
   <!-- diseño personalisado -->
-  <link rel="stylesheet" href="view/css/DiseñoDeTablaCliente.css">
+  <link rel="stylesheet" href="view/css/DiseñoDeTablaReporteGeneral.css">
   <link rel="stylesheet" href="view/css/disenoDeMenu.css">
   <!-------alertas de javascript sweetalert2 -->
   <link rel="stylesheet" href="view/css/sweetalert2.min.css">
   <script src="view/js/sweetalert2.all.min.js"></script>
   <!-- extencion de iconos de el mini menu -->
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
-
-
 </head>
 
 <body>
@@ -137,50 +135,54 @@
   </section>
 
   <div class="container ">
-    <h1 class="titulo">Tabla de Clientes</h1>
+    <h1 class="titulo">Tabla de Reporte General</h1>
 
-    <table class="table table-hover" id="clientes">
+    <table class="table table-hover" id="reporteGeneral">
       <thead>
         <tr>
-          <th>Cedula</th>
-          <th>Nombre</th>
-          <th>Apellido</th>
-          <th>Celular</th>
-          <th>Email</th>
+          <th>IdServico</th>
+          <th>Datos de Servico</th>
+          <th>Punto de servico</th>
+          <th>kilometraje</th>
+          <th>Tecnico</th>
+          <th>Descripcion</th>
+          <th>Placa</th>
           <th>Funciones</th>
 
         </tr>
       </thead>
-      <a name="" id="salir" class="btn btn-outline-success" href="index.php?ruta=reporteCliente" role="button"><img src="view/img/excel.png" width="60%" height="30%" alt=""></a>
+      <a name="" id="salir" class="btn btn-outline-success" href="index.php?ruta=reporteClientes" role="button"><img src="view/img/excel.png" width="60%" height="30%" alt=""></a>
       <tbody>
         <?php
-        $objCtrClientes = new ControllerCliente();
-        $listaDeClientes = $objCtrClientes->ctrListarCliente();
-        foreach ($listaDeClientes as $dato) {
+        $objCtrServicio = new CotrellerReporte();
+        $listaDeServicio = $objCtrServicio->ctrListarServicio();
+        foreach ($listaDeServicio as $dato) {
           echo "
-            <tr>
-              <td>" . $dato["CEDULA"] . "</td>
-              <td>" . $dato["NOMBRE"] . "</td>
-              <td>" . $dato["APELLIDO"] . "</td>
-              <td>" . $dato["CELULAR"] . "</td>
-              <td>" . $dato["CORREO"] . "</td>
-              <td>
-                <button type='button' class='btn btn-outline-primary' id='boton1' data-toggle='modal' data-target='#ModificarModal' onclick='modificar(this.parentElement.parentElement);' ><img src='view/img/editar.png' alt='' width='90%' height='50%'></button>
-                <button type='button' class='btn btn-outline-danger' id='boton2' onclick='eliminar(this.parentElement.parentElement);' ><img src='view/img/eliminar.png' alt='' width='90%' height='50%'></button>
-                <button type='button' class='btn btn-outline-success'id='boton3'><img src='view/img/inahabilitar.png' alt='' width='90%' height='50%'></button>
-              </td>
-            </tr>
-            ";
+              <tr>
+                <td>" . $dato["idServico"] . "</td>
+                <td>" . $dato["DatosDeServico"] . "</td>
+                <td>" . $dato["puntoDeServicio"] . "</td>
+                <td>" . $dato["Kilometraje"] . "</td>
+                <td>" . $dato["tecnico"] . "</td>
+                <td>" . $dato["descripcion"] . "</td>
+                <td>" . $dato["PLACA"] . "</td>
+                <td>
+                  <button type='button' class='btn btn-outline-primary' id='boton1' data-toggle='modal' data-target='#ModificarModal' onclick='modificar(this.parentElement.parentElement);' ><img src='view/img/editar.png' alt='' width='90%' height='50%'></button>
+                  <button type='button' class='btn btn-outline-danger' id='boton2' onclick='eliminar(this.parentElement.parentElement);' ><img src='view/img/eliminar.png' alt='' width='90%' height='50%'></button>
+                  <button type='button' class='btn btn-outline-success'id='boton3'><img src='view/img/inahabilitar.png' alt='' width='90%' height='50%'></button>
+                </td>
+              </tr>
+              ";
         }
         ?>
       </tbody>
     </table>
-  <!-- 
-  elimar a cliente -->
+    <!-- 
+  elimar a reporte -->
     <?php
-    if (isset($_GET['eliminar'])) {
-      $objCtrClientes = new ControllerCliente;
-      $objCtrClientes->ctrEliminarCliente();
+    if (isset($_GET['ELIMINAR'])) {
+      $objCtrReporte = new CotrellerReporte;
+      $objCtrReporte->ctrEliminarReporte();
     }
     ?>
 
@@ -197,69 +199,102 @@
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <form action="" method="post" class="" name="frmModificar" id="frmModificar">
+        <form action="" method="post" class="" name="formulario" id="formulario">
           <div class="card-body mx-auto">
-            <div class="row">
-              <div class="form-groun col-12 col-sm-6 col-md-6">
-                <label for="pwd" class="subtitulos">Cedula </label>
-                <div class="">
-                  <input type="text" class="form-control" name="txtMCedula" id="txtMCedula">
+              <!-- campo para modificar codigo -->
+              <div class="form-groun col-12 col-sm-6 col-md-6" id="grupoKilometraje">
+                <label for="pwd" class="subtitulos">IdModificar </label>
+                <div class="negacion">
+                  <input type="txt" class="form-control" name="txtMReporte" id="txtMReporte">
+
                 </div>
 
               </div>
-              <div class="form-groun col-12 col-sm-6 col-md-6">
-                <label for="pwd" class="subtitulos">Correo </label>
-                <div class="">
-                  <input type="text" class="form-control" name="txtMCorreo" id="txtMCorreo">
-                </div>
+            <!--  campo para seleccionar placa -->
+            <div class="form-groun  col-12 col-sm-6 col-md-6" id="grupoPlaca">
+              <label for="" class="txt"> Placa:</label>
+              <select name="txtMPlaca" id="txtMPlaca" class="form-control">
+                <option value=""> Seleccione la placa </option>
+                <?php
+                $objReporte = new CotrellerReporte();
+                $lista =  $objReporte->ctrListarPlaca();
+                foreach ($lista as $dato) {
+                  echo '<option value="' . $dato["PLACA"] . '"> ' . $dato["PLACA"] . ' </option>';
+                }
+                ?>
+
+              </select>
+
+            </div>
+
+            <!-- campo para insertar el dato del sevicio -->
+            <div class="form-groun  col-12 col-sm-6 col-md-6" id="grupoServico">
+              <label for="pwd" class="subtitulos">Datos del servicio </label>
+              <div class="negacion">
+                <input type="txt" class="form-control" name="txtMServico" id="txtMServico">
 
               </div>
+
             </div>
             <div class="row">
-              <div class="form-groun col-12 col-sm-6 col-md-6 ">
-                <label for="pwd" class="subtitulos">Nombre </label>
-                <div class="">
-                  <input type="text" class="form-control" name="txtMNombre" id="txtMNombre">
+              <div class="form-groun  col-12 col-sm-6 col-md-6" id="grupoPunto">
+                <label for="" class="txt"> Punto Servico:</label>
+                <select name="txtMPunto" id="txtMPunto" class="form-control">
+                  <option value=""> Seleccione el punto </option>
+                  <?php
+                    $objReporte = new CotrellerReporte();
+                    $lista =  $objReporte->ctrListarPuntoDeservico();
+                    foreach ($lista as $dato) {
+                      echo '<option value="' . $dato["idPuntoDeServico"] . '"> ' . $dato["punto"] . ' </option>';
+                    }
+                  ?>
+
+                </select>
+
+              </div>
+              <div class="form-groun col-12 col-sm-6 col-md-6" id="grupoKilometraje">
+                <label for="pwd" class="subtitulos">kilometraje </label>
+                <div class="negacion">
+                  <input type="txt" class="form-control" name="txtMKilometraje" id="txtMKilometraje">
+
                 </div>
 
               </div>
-              <div class="form-groun col-12 col-sm-6 col-md-6">
-                <label for="pwd" class="subtitulos">Celular </label>
-                <div class="  ">
-                  <input type="text" class="form-control" name="txtMCelular" id="txtMCelular">
-                </div>
-
+              <div class="form-groun col-12 col-sm-6 col-md-6" id="grupoTecnico">
+                <label for="" class="txt"> Tecnico:</label>
+                <select name="txtMTecnico" id="txtMTecnico" class="form-control">
+                  <option value=""> Seleccione el tecnico </option>
+                  <?php
+                  $objReporte = new CotrellerReporte();
+                  $lista =  $objReporte->ctrListarTecnicos();
+                  foreach ($lista as $dato) {
+                    echo '<option value="' . $dato["CEDULA"] . '"> ' . $dato["CEDULA"] . ' </option>';
+                  }
+                  ?>
+                </select>
               </div>
             </div>
-            <div class="row">
-              <div class="form-groun col-12 col-sm-6 col-md-6 ">
-                <label for="pwd" class="subtitulos">Apellido</label>
-                <div class="">
-                  <input type="text" class="form-control" name="txtMApellido" id="txtMApellido">
-
-                </div>
-
+            <div class="form-groun col-12 col-sm-12 col-md-12" id="grupoDescripcion">
+              <label for="pwd" class="subtitulos">Descripcion de la Solicitud </label>
+              <br>
+              <div class="negacion">
+                <textarea class="form-control" name="txtMDescripcion" id="txtMDescripcion" rows="4" id="comment"></textarea>
               </div>
             </div>
-            
 
+
+            <div class="modal-footer">
+              <button type="submit" class="btn btn-primary" id="boton1">Guardar</button>
+              <button type="button" class="btn btn-danger" id="boton2" data-dismiss="modal">Cancelar</button>
+            </div>
           </div>
-          <div class="modal-footer">
-            <button type="submit" class="btn btn-primary" id="boton1">Actualizar</button>
-            <button type="button" class="btn btn-danger" id="boton2" data-dismiss="modal">Close</button>
-          </div>
-
-
           <?php
-
-          if (isset($_POST['txtMCedula'])) {
-            $objCtrClientes = new ControllerCliente();
-            $listaDeReporte = $objCtrClientes->ctrModificarCliente();
-          }
+          /* modificar reporte */
+            if (isset($_POST['txtMDescripcion'])){
+              $objCtrReporte = new CotrellerReporte();
+              $objCtrReporte-> ctrModificarReporte();
+            }
           ?>
-
-
-
         </form>
 
       </div>
@@ -276,17 +311,16 @@
   <script src="cdn.datatables.net/plug-ins/1.12.1/i18n/es-CO.json"></script>
   <script>
     $(document).ready(function() {
-      $('#clientes').DataTable({
+      $('#reporteGeneral').DataTable({
         language: {
-          search: "Cliente ",
+          search: "Reportes ",
           zeroRecords: "No hay resultados",
           previous: "Pr&eacute;c&eacute;dent"
-
         }
       });
     });
   </script>
-  <script src="view/js/crud.Clientes.js"></script>
+  <script src="view/js/crud.Reporte.js"></script>
   <script src="view/js/validacion.js"></script>
 
 

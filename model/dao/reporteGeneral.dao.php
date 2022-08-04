@@ -1,5 +1,6 @@
 <?php
-    class ModelReporteteGeneral{
+    class ModelReporteGeneral{
+        private $idReporte;
         private $datosDeServico;
         private $puntoDeServico;
         private $kilometraje;
@@ -9,6 +10,7 @@
        
 
         public function __construct($objDtoReportegeneral){
+            $this-> idReporte = $objDtoReportegeneral-> getIdReporte();
             $this-> datosDeServico = $objDtoReportegeneral-> getDatosDeServico();
             $this-> puntoDeServico  =  $objDtoReportegeneral-> getpuntoDeServio();
             $this-> kilometraje =  $objDtoReportegeneral-> getkilometraje();
@@ -20,9 +22,8 @@
     /* CREAMOS LA FUNCION PARA INSERTAR LOS DATOS */
 
         public function mldInsertarReporteGenearal(){
-           
             /* creamos las sentencia  */
-            $sql = "CALL `spInsetarReporteGeneral`(?,?,?,?,?,?);";/* procedimiento almacenado */
+            $sql = "CALL spInsetarReporteGeneral(?,?,?,?,?,?)";/* procedimiento almacenado */
             $this -> estado = false;
             /* cremaos el try  catch*/
             try {
@@ -39,7 +40,7 @@
                 $stmt -> execute();
                 $this -> estado = true;
             } catch (PDOException $ex) {
-                echo "Hay un error al insertar EL REPORTE GENERAL " . $ex -> getMessage();
+                echo "HAY UN ERROR AL  INSERTAR EL REPORTE GENERAL " . $ex -> getMessage();
             }
             return $this -> estado;
 
@@ -90,10 +91,70 @@
             }
             return $resulset;
         }
+        /* listamos los reporte generales*/
+               
+        public function mdlListarServico(){
+            $sql = "CALL `spListarServico`()";  /* procedimiento almacenado */
+            try {
+                 $con = new Conexion();
+                 $stmt = $con -> conexion() -> prepare($sql);
+                 $stmt -> execute();
+                 $resulset = $stmt;
+                        
+            } catch (PDOException $e) {
+                echo "Error en el metodo dao al listar la placa " . $e -> getMessage();
+            }
+                return $resulset;
+        }
+        /* creamos una funcion para editar el repoete general */
+        public function mdlModificarReporte(){
+            $sql= "CALL splModificarReporte(?,?,?,?,?,?,?)";
+            $this -> estado = false;
+            /* creamos el try catch  */
+            try {
+                
+                /* llamamos a la conexion */
+                $con = new Conexion();
+                $stmt = $con -> conexion() -> prepare($sql);
+                $stmt -> bindParam(1, $this->idReporte, PDO::PARAM_INT );
+                $stmt -> bindParam(2, $this->datosDeServico, PDO::PARAM_STR );
+                $stmt -> bindParam(3, $this->puntoDeServico, PDO::PARAM_INT );
+                $stmt -> bindParam(4, $this->kilometraje, PDO::PARAM_STR );
+                $stmt -> bindParam(5, $this->tecnico, PDO::PARAM_INT );
+                $stmt -> bindParam(6, $this->descripcion, PDO::PARAM_STR );
+                $stmt -> bindParam(7, $this->placa, PDO::PARAM_STR );
+                $stmt -> execute();
+                $this -> estado = true;
+            } catch (PDOException $ex) {
+                echo "Hay un error al modififar  " . $ex -> getMessage();
+            }
+            return $this -> estado;
+
+        }/* fin de la funcion */
+
+        /* funcion para eliminar reporte general */
+        public function mdlEliminarReporte(){
+            $sql="CALL splEliminarReporte(?)";
+            $this -> estado = false;
+            try {
+                /* llamamos a la conexion  */
+                $con = new Conexion();
+                $stmt = $con -> conexion() -> prepare($sql);
+                $stmt -> bindParam(1, $this->idReporte, PDO::PARAM_INT );
+                $stmt -> execute();
+                $this -> estado = true;
+                
+
+
+            } catch (PDOException $ex) {
+                echo "Hay un error en el dao al eliminar el el reporte general " . $ex -> getMessage();
+            }
+            return $this -> estado;
+
+
+        } 
+
 
 
 
     }
-?>
-<!-- ERROR ESTUPIDO -->
-<!-- > -->

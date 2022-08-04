@@ -1,48 +1,50 @@
 <?php
-    header("content-Type: application/xls");
-    header("content-Disposition: attachment; filename= reporte de vehiculo.xls");
-    
-
+  header("content-Type: application/xls");
+  header("content-Disposition: attachment; filename= reporte de vehiculo.xls");
+  date_default_timezone_set('America/Bogota');
+  $fecha = date('m-d-Y', time());
+  $hora = date('h:i:s a', time());
 ?>
-    <table class="table table-hover" id="vehiculo">
-      <thead>
+<table class="table table-hover" id="vehiculo" border="2">
+    <thead>
+      <tr>
+        <th bgcolor="DeepSkyBlue" colspan="5" rowspan="2">Reporte De Vehiculos </th>
+        <th bgcolor='PaleTurquoise'>FECHA</th>
+        <th bgcolor='PaleTurquoise'>HORA</th>
+      </tr>
+      <tr>
+        <th><?php echo $fecha; ?></th>
+        <th><?php echo $hora; ?></th>
+      </tr>
+      <tr>
+        <th bgcolor="DeepSkyBlue">Placa</th>
+        <th bgcolor="DeepSkyBlue">Clase de Vehiculo</th>
+        <th bgcolor="DeepSkyBlue">Marca de Vehiculo</th>
+        <th bgcolor="DeepSkyBlue">Numero de cilindraje</th>
+        <th bgcolor="DeepSkyBlue">Lina de Vehiculo</th>
+        <th bgcolor="DeepSkyBlue">Modelo de Vehiculo</th>
+        <th bgcolor="DeepSkyBlue">Numero del Motor</th>
+      </tr>
+    </thead>
+  <tbody>
+    <?php
+    $objCtrCtrVehiculo = new ControllerVehiculo();
+    $listaDeVehiculo = $objCtrCtrVehiculo->ctrListarVehiculo();
+    foreach ($listaDeVehiculo as $dato) {
+      echo "
         <tr>
-          <th>Placa</th>
-          <th>Clase de Vehiculo</th>
-          <th>Marca de Vehiculo</th>
-          <th>Numero de cilindraje</th>
-          <th>Lina de Vehiculo</th>
-          <th>Modelo de Vehiculo</th>
-          <th>Numero del Motor</th>
-          <th>Funciones</th>
-
+          <td bgcolor='PaleTurquoise' >" . $dato["PLACA"] . "</td>
+          <td bgcolor='Aqua' >" . $dato["MARCA"] . "</td>
+          <td bgcolor='PaleTurquoise' >" . $dato["CILINDRAJE"] . "</td>
+          <td bgcolor='Aqua' >" . $dato["LINEA"] . "</td>
+          <td bgcolor='PaleTurquoise' >" . $dato["CLASE"] . "</td>
+          <td bgcolor='Aqua' >" . $dato["MODELO"] . "</td>
+          <td bgcolor='PaleTurquoise' >" . $dato["NUMERO MOTOR"] . "</td>
+          
         </tr>
-      </thead>
-      <a name="" id="salir" class="btn btn-outline-success" href="index.php?ruta=reporteVehiculo" role="button"><img src="view/img/excel.png" width="60%" height="30%" alt=""></a>
-      <tbody>
-        <?php
-        $objCtrCtrVehiculo = new ControllerVehiculo();
-        $listaDeVehiculo = $objCtrCtrVehiculo->ctrListarVehiculo();
-        foreach ($listaDeVehiculo as $dato) {
-          echo "
-          <tr>
-            <td>" . $dato["PLACA"] . "</td>
-            <td>" . $dato["MARCA"] . "</td>
-            <td>" . $dato["CILINDRAJE"] . "</td>
-            <td>" . $dato["LINEA"] . "</td>
-            <td>" . $dato["CLASE"] . "</td>
-            <td>" . $dato["MODELO"] . "</td>
-            <td>" . $dato["NUMERO MOTOR"] . "</td>
-            <td>
-            <button type='button' class='btn btn-outline-primary' id='boton1' data-toggle='modal' data-target='#ModificarModal' onclick='modificar(this.parentElement.parentElement);' ><img src='view/img/editar.png' alt='' width='90%' height='50%'></button>
-            <button type='button' class='btn btn-outline-danger' id='boton2' onclick='eliminar(this.parentElement.parentElement);' ><img src='view/img/eliminar.png' alt='' width='90%' height='50%'></button>
-            <button type='button' class='btn btn-outline-success'id='boton3'><img src='view/img/inahabilitar.png' alt='' width='90%' height='50%'></button>
-            </td>
-            
-          </tr>
-          ";
-        }
-        ?>
+        ";
+    }
+    ?>
 
-      </tbody>
-    </table>
+  </tbody>
+</table>

@@ -85,8 +85,9 @@ div.botones {
 
 .btn {
 
-    width: 20%;
+    width: 24%;
     margin: auto;
+
 
 }
 
@@ -139,11 +140,11 @@ div.botones {
     transform: translateY(2px);
 }
 
-/*----------------- diseño del modal de modifiar cliente -----------------*/
+/*----------------- diseño del modal de modifiar Reporte general -----------------*/
 #modalC {
     
-    background: -webkit-linear-gradient(to top, #0073ff2d, #00e0f0); 
-    background: linear-gradient(to top, #0073ff2d, #00e0f0); 
+    background: -webkit-linear-gradient(to top, #0073ffb6, #00e0f0); 
+    background: linear-gradient(to top, #0073ffb6, #00e0f0); 
      
 }
 .dataTables_length{

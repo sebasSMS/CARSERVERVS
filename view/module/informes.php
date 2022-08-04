@@ -2,7 +2,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Title</title>
+    <title>Informes</title>
     <link rel="shortcut icon" href="view/img/logoProyecto.png" type="image/x-icon">
     <link rel="shortcut icon" href="view/img/logoProyecto.png" type="image/x-icon">
     <!-- Required meta tags -->
@@ -22,13 +22,9 @@
         
         <a name="" id="bones" class="btn btn-primary" href="index.php?ruta=tableUsuario" role="button" > Informes de Usuarios <img src="view/img/userTable.png" alt="" width="60%" height="70%"> </a>
         <a name="" id="bones" class="btn btn-primary" href="index.php?ruta=tableCliente" role="button"> Informes de clientes <img src="view/img/clienTable.png" alt="" width="60%" height="70%"></a>
-        <a name="" id="bones" class="btn btn-primary" href="index.php?ruta=tableVehiculos" role="button"> Informes de vehiculos <img src="view/img/carTable.png" width="70%" height="70%" ></a>
-        
-        
-
-        
-
-    
+        <a name="" id="bones" class="btn btn-primary" href="index.php?ruta=tableVehiculos" role="button"> Informes de vehiculos <img src="view/img/carTable.png" width="55%" height="75%" ></a>
+        <a name="" id="bones" class="btn btn-primary" href="index.php?ruta=tableReporteGeneral" role="button"> Informes de reporte general <img src="view/img/informeGeneral.png"  width="50%" height="75%" ></a>
+      
     </div>
        
 

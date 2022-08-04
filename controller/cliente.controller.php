@@ -1,5 +1,6 @@
 <?php
     class ControllerCliente{
+        /* funcion para insertar als contraseña */
         public function crtInsertarCliente($cedula,$nombre,$apellido,$celular,$correo){
 
             $ojbDtoCliente = new Clientes($cedula,$nombre,$apellido,$celular,$correo);
@@ -34,7 +35,10 @@
             
 
 
-        }
+        }/* fin de la funcion */
+
+        /* funcion para listar cliente */
+
         public function ctrListarCliente(){
             $array = false; 
             try {
@@ -46,7 +50,10 @@
             }
             return $array;
 
-        }
+        }/* fin de la funcion */
+
+        /* funcion para modificar cliente */
+
         public function ctrModificarCliente(){
             $ojbDtoCliente = new Clientes(
                 $_POST['txtMCedula'],
@@ -95,6 +102,9 @@
                     ";
             }
         }
+
+        /* funcion para eliminar cliente */
+        
         public function ctrEliminarCliente(){
             $ojbDtoCliente = new Clientes(
                 $_GET['eliminar'],
@@ -115,7 +125,7 @@
 
       
         }
-        
+        /* fin de la funcion */
     } /* end of class */
 
 ?>

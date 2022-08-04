@@ -1,6 +1,5 @@
 <!doctype html>
 <html lang="en">
-
 <head>
   <!-- Required meta tags -->
   <meta charset="utf-8">
@@ -113,7 +112,7 @@
 
         if (isset($_POST["txtPunto"])) {
           $objReporte = new CotrellerReporte();
-          $objReporte->crtInsertarReporteGeneral(
+          $objReporte-> crtInsertarReporteGeneral(
             $_POST["txtServico"],
             $_POST["txtPunto"],
             $_POST["txtKilometraje"],

@@ -19,7 +19,7 @@
                   )
                 ;</script>";
             }
-        }
+        }/* fin de la funcion */
     }
 
 ?>

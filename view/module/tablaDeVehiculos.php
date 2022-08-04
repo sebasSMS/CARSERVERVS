@@ -130,7 +130,7 @@
     </label>
   </section>
 
-  <div class="container mt-3">
+  <div class="container">
     <h1 class="titulo">Tabla de Vehculo</h1>
     <table class="table table-hover" id="vehiculo">
       <thead>
@@ -293,8 +293,8 @@
 
             </div>
             <div class="modal-footer">
-              <button type="submit" class="btn btn-outline-primary" id="boton1">Actualizar</button>
-              <button type="button" class="btn btn-outline-danger" id="boton2" data-dismiss="modal">Close</button>
+              <button type="submit" class="btn btn-primary" id="boton1">Actualizar</button>
+              <button type="button" class="btn btn-danger" id="boton2" data-dismiss="modal">Close</button>
             </div>
             <?php
             /* modificar Vehiculo */

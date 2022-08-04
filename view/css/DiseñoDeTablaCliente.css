@@ -14,8 +14,8 @@ body {
     margin-left: 5px;
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
-
 }
+
 
 thead {
 
@@ -88,6 +88,7 @@ div.botones {
     width: 20%;
     margin: auto;
 
+
 }
 
 /* ----------------movimiento de los botones----------------*/
@@ -139,13 +140,13 @@ div.botones {
     transform: translateY(2px);
 }
 
-/*----------------- diseño del modal de modifiar cliente -----------------*/
+/*----------------- diseño del modal de modifiar Reporte general -----------------*/
 #modalC {
     
-    background: -webkit-linear-gradient(to top, #0073ff2d, #00e0f0); 
-    background: linear-gradient(to top, #0073ff2d, #00e0f0); 
+    background: -webkit-linear-gradient(to top, #0073ffb6, #00e0f0); 
+    background: linear-gradient(to top, #0073ffb6, #00e0f0); 
      
 }
-#clientes_length{
+.dataTables_length{
     display:none;
 }

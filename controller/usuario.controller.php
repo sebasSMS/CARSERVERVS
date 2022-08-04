@@ -1,5 +1,6 @@
 <?php
     class ControllerUsuario{
+        /* funcion para insertar el usuario */
         public function crtInsertarUsuario($cedula,$nombre,$apellido,$celular,$correo,$rol){
 
             $objDtoUsuario = new Usuario($cedula,$nombre,$apellido,$celular,$correo,$rol);
@@ -33,8 +34,8 @@
             
 
 
-        }
-        
+        }/* fin de la funcion */
+        /* funcion para mostrar el rol */
         public function ctrMostrarRol(){ 
             $lista = false;
             try {
@@ -46,7 +47,7 @@
                 echo "error al mostrar los Roles de usuarios" . $e -> getMessage();
             }
             return $lista;
-        }
+        }/* fin de la funcion */
         public function ctrListarUsuario(){
             $array = false; 
             try {
@@ -58,7 +59,7 @@
             }
             return $array;
 
-        }
+        }/* fin de la funcion */
         public function ctrModificarUsuario(){
             $ojbDtoUsuario = new Usuario(
                 $_POST['txtMCedula'],
@@ -104,7 +105,7 @@
                     ;</script>
                     ";
             }
-        }
+        }/* fin de la funcion */
         public function ctrEliminarUsuario(){
             $ojbDtoUsuario = new Usuario(
                 $_GET['eliminar'],
@@ -124,7 +125,7 @@
             </script>";
 
       
-        }
+        }/* fin de la funcion */
         /*funcion para recordar contraseña */
         public function crtValidarInformacion($cedula,$correo){
 
@@ -151,30 +152,49 @@
                     $asunto ="Recordar Contraseña";
                     $bodyHTML = '
                         <style>
-                            .titulo{
-                                color: rgb(28, 159, 235);
-                            }
+
                         </style>
-                        <h1 class="titulo"><em>Car Servicer V.S </em> </h1>
+                        <h1 class="titulo"><em>Car Service V.S </em> </h1>
                         <br>
                         <hr>
-                        <h2> Hola, </h2>
-                        <h2> <b> Sñr@, '.$datoP[1].' '.$datoP[2].' </b>, </h2>
-                        <h2> Haz olvidado la contraseña,<i> ¡No te preocupes!</i>, </h2>
-                        <h2> A continuación te la recordamos. </h2>
+                        <h2> <b> Hola '.$datoP[1].' '.$datoP[2].' </b> </h2>
+                        <h2> Hemos recibido una solicitud para recordar la contraseña lo, </h2>
+                        <h2> hacemos  mas facil por ti.</h2>
                         <br>
-                        <h2 > CONTRASEÑA: <b>( '.$datoP[0].' )</b> </h2>
+                        <h2 > Tu contraseña es <b>( '.$datoP[0].' )</b> </h2>
                         <br>
                         <hr>
                         <mark>
-                            <h2> Gracias, </h2>
-                            <h2> El equipo de Car ServicerV.S </h2>
+                            <h2> Gracias</h2>
+                            <h2> El equipo de Car Servicer V.S le informa que si no solicitaste la recordar la contraseña</h2>
+                            <h2> ignora este correo o comunicate con nuestro centro de ayuda</h2>
                         </mark>
                     ';
                     $enviado = $mailSend->metEnviar($titulo,$correo,$asunto,$bodyHTML);
     
                     if($enviado){
-                        echo "<script>alert('Enviado');</script>";
+                        
+                        echo"
+                        <script>
+                        Swal.fire({
+                            title: 'GOOD',
+                            text: ' LA CONTRASEÑA FUE ENVIADA AL CORREO PERSONAL',
+                            icon: 'success',
+                            timerProgressBar:true,
+                            timer:4000,
+                            showCancelButton: false,
+                            confirmButtonColor: '#3085d6',
+                            cancelButtonColor: '#d33',
+                            confirmButtonText: 'Ok!'
+                          }).then((result) => {
+                            if (result.isConfirmed) {
+                                window.location='index.php?ruta=login.php';
+                            }else{
+                                window.location='index.php?ruta=login.php';
+                            }
+                          })
+                        </script>
+                        ";
                     }else{
                         echo "<script>alert('No se envió correo');</script>";
                     }       
@@ -186,6 +206,5 @@
                 
             }
 
-
-        }
+        }/* fin de la funcion */
     }

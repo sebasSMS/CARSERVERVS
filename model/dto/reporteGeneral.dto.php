@@ -1,5 +1,6 @@
 <?php
     class Reporte{
+        private $idReporte;
         private $datosDeServico;
         private $puntoDeServico;
         private $kilometraje;
@@ -7,16 +8,21 @@
         private $descripcion;
         private $placa;
 
-        public function __construct($datosDeServico,$puntoDeServico,$kilometraje,$tecnico,$descripcion,$placa){
+        public function __construct($idReporte,$datosDeServico,$puntoDeServico,$kilometraje,$tecnico,$descripcion,$placa){
         
+            $this-> idReporte = $idReporte; 
             $this-> datosDeServico = $datosDeServico;   
             $this-> puntoDeServico = $puntoDeServico; 
             $this-> kilometraje = $kilometraje; 
             $this-> tecnico = $tecnico;
             $this-> descripcion = $descripcion; 
             $this-> placa = $placa; 
+
         }
-        /* get */   
+        /* get */  
+        public function getIdReporte(){
+            return $this-> idReporte;
+        } 
         public function getDatosDeServico(){
             return $this-> datosDeServico;
         }
@@ -37,7 +43,13 @@
         public function getPlaca(){
             return $this-> placa;
         }
+       
+    
+
         /* set */
+        public function setIdReporte($idReporte){
+            $this->idReporte = $idReporte;
+        }
         public function setDatosDeServico($datosDeServico){
             $this->datosDeServico = $datosDeServico;
         }
@@ -56,6 +68,7 @@
         public function setPlaca($placa){
             $this->placa = $placa;
         }
+
 
     }
 ?>

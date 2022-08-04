@@ -34,6 +34,10 @@
             case 'tableVehiculos':
                 require_once "view/module/tablaDeVehiculos.php";
                 break;
+            case 'tableReporteGeneral':
+                require_once "view/module/tablaDeReporteGeneral.php";
+                break;
+                
             /* -----------------------reporte -------------------------*/
             case 'reporteCliente':
                 require_once "view/module/reporteClientes.php";
